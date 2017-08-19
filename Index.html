@@ -6,9 +6,6 @@
 	<title>WWC-1</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="icon" href="favicon.ico">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -16,17 +13,79 @@
 	<div id="wrapper">
 
 		<header>
-			<img src="images/header-logo.jpg" alt="logo - header"/>
-			<img src="images/header-title.jpg" alt="title - header"/>
+			<img src="images/header_logo.jpg" alt="logo - header"/>
+			<img src="images/header_title.jpg" alt="title - header"/>
 		</header>
 
-		<section>
-			<article>
-				<h1>Nasza pierwsza strona internetowa</h1>
-				<p><img class="left" src="face.jpg" alt="twarz"/>Taką stronę jesteś w stanie napisać z palca w godzinę (może dwie) po kilku tygodniach nauki. Pomyśl, co będziesz w stanie zrobić po kilku miesiacach :)</p>
-				<p>Ta strona jest prosta, ale zgodna ze standardami html5 i css3. Można ją oczywiście rozbudować i upiększyć, co też zrobimy w odcinku bonusowym (trzecim). Można też napisać ją zupełnie inaczej i uzyskać ten sam efekt. Dróg do celu jest wiele i nie zawsze jest lepsza czy gorsza.</p>
-				<p>Nauka tworzenia stron to eksperymentowanie. Częściej coś działa niż nie działa. Niech Cię to nie irytuje tylko bawi :)</p>
-			</article>
+		<section id="left">
+
+			<div id="register_form">
+				<h1>Register Form</h1>
+				<form class="form" method="post">
+					<input type="text" placeholder="Username" name="Username" />
+					<input type="password" placeholder="Password" name="Password" />
+					<input type="password" placeholder="Confirm Password" name="Confirm_Password" />
+					<input type="email" placeholder="Email" name="Email" />
+					<select>
+  					<option>Opcja 1</option>
+  					<option>Opcja 2</option>
+  					<option>Opcja 3</option>
+					</select>
+					<label><input type="checkbox" name="Check" />I have read and accept the terms of use.</label>
+					<input type="submit" value="Sign up" />
+				</form>
+			</div>
+
+			<div id="send_email">
+				<h1>Send Email</h1>
+				<form class="form" method="post">
+					<input type="text" placeholder="Your Name" name="Username" />
+					<input type="email" placeholder="Your Email" name="Email" />
+					<textarea>Type your message...</textarea>
+					<label><input type="checkbox" name="Check" />Send a copy to my Email</label>
+					<input type="submit" value="Send Email" />
+				</form>
+			</div>
+
+		</section>
+
+		<section id="right">
+
+			<div id="sign_in_form">
+				<h1>Sign In Form</h1>
+				<form class="form" method="post">
+					<input type="text" placeholder="Username" name="Username" />
+					<input type="password" placeholder="Password" name="Password" />
+					<label><input type="checkbox" name="Check" />Remember me</label>
+					<input type="submit"value="Sign in" />
+				</form>
+			</div>
+
+			<div id="recover_form">
+				<h1>Recover Form</h1>
+				<form class="form" method="post">
+					<input type="email" placeholder="Enter your Email" name="Email" />
+					<input type="number" placeholder="Enter your phone number" name="Phone_Number" />
+					<input type="submit" value="Send" />
+					<input type="submit" value="Done" />
+				</form>
+			</div>
+
+			<div id="subscribe_form">
+				<h1>Subscribe Form</h1>
+				<form class="form" method="post">
+					<input type="email" placeholder="Enter your Email" name="Email" />
+					<input type="submit" value="Subscribe" />
+					<input type="submit" value="No, Thanks" />
+				</form>
+			</div>
+
+			<div id="footer">
+				<img src="images/footer_logo.jpg" alt="logo - footer"/>
+				<img src="images/footer_title.jpg" alt="title - footer"/>
+				<img src="images/footer_website.jpg" alt="website - footer"/>
+			</div>
+
 		</section>
 
 	</div>

@@ -1,93 +1,63 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Roboto, arial;
 	box-sizing: border-box;
 }
 
 body {
-	background-color: #ddb;
+	background-image: url("../images/background.jpg");
+	background-color: #cccccc;
+	background-position: center;
 }
 
 #wrapper {
-	max-width: 1000px;
+	max-width: 1025px;
+	max-height: 1375px;
 	margin: 0 auto;
-	background-color: white;
 }
 
 header img {
-	width: 100%;
-	display: block;
+	width: 200px;
+	display: inline;
 }
 
-nav {
-	overflow: hidden;
-}
-
-nav a {
-	display: block;
-	width: 25%;
-	padding: 15px 30px;
-	color: white;
-	background-color: darkcyan;
-	text-decoration: none;
-	text-align: center;
+#left {
 	float: left;
-	transition: all 1s ease;
 }
 
-nav a.menu:hover {
-	background-color: crimson;
-}
-
-nav a.active {
-	background-color: crimson;
-}
-
-@media (max-width: 800px) {
-	nav a {
-		width: 50%;
-		font-size: 40px;
-	}
-}
-
-article {
-	margin-bottom: 20px;
-	padding: 20px;
-}
-
-article h1 {
-	font-size: 30px;
-	text-align: center;
-	margin: 0px 20% 20px 20%;
-	padding-bottom: 15px;
-	border-bottom: 2px solid crimson;
-}
-
-.left {
+#right {
 	float: left;
-	padding: 10px;
-	width: 25%;
-	border-radius: 50% 30%;
-	margin: 0 10px 10px 0;
 }
 
-article p {
-	text-align: justify;
-	line-height: 25px;
-	font-size: 18px;
-	padding: 15px 0;
-}
-
-iframe {
+.form input, textarea{
 	width: 100%;
 }
 
-footer {
-	height: 40px;
-	line-height: 40px;
-	background-color: darkcyan;
+#register_form {
+	max-width: 430px;
+	max-height: 460px;
+}
+
+#send_email {
+	max-width: 430px;
+}
+
+#sign_in_form {
+	max-width: 430px;
+}
+
+#recover_form {
+	max-width: 430px;
+}
+
+#subscribe_form {
+	max-width: 430px;
+}
+
+#footer {
+	max-width: 430px;
+}
+
+h1 {
 	color: white;
-	text-align: center;
-	margin-top: 10px;
 }
