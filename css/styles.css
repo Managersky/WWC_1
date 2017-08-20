@@ -6,8 +6,9 @@
 
 body {
 	background-image: url("../images/background.jpg");
-	background-color: #cccccc;
 	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 #wrapper {
@@ -21,6 +22,10 @@ header img {
 	display: inline;
 }
 
+h1 {
+	color: white;
+}
+
 #left {
 	float: left;
 }
@@ -29,13 +34,36 @@ header img {
 	float: left;
 }
 
-.form input, textarea{
-	width: 100%;
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	margin: 10px;
+	padding: 10px;
+}
+
+[type="text"], [type="password"], [type="email"], /*[type="submit"],*/
+select, textarea{
+	width: 80%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.checkbox {
+	width: 80%;
+	padding: 10px;
+}
+
+.submit1 {
+	background-color: green;
+	width: 80%;
+	margin: 10px;
+	padding: 10px;
 }
 
 #register_form {
+	background-color: white;
 	max-width: 430px;
 	max-height: 460px;
+	padding: 5%;
 }
 
 #send_email {
@@ -56,8 +84,4 @@ header img {
 
 #footer {
 	max-width: 430px;
-}
-
-h1 {
-	color: white;
 }
