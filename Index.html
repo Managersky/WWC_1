@@ -13,8 +13,8 @@
 	<div id="wrapper">
 
 		<header>
-			<img src="images/header_logo.jpg" alt="logo - header"/>
-			<img src="images/header_title.jpg" alt="title - header"/>
+			<img src="images/header_logo.jpg" alt="logo - header" />
+			<img src="images/header_title.jpg" alt="title - header" />
 		</header>
 
 		<section id="left">
@@ -25,17 +25,17 @@
 					<input class="username" type="text" placeholder="Username" name="username_register_form" />
 					<input class="password" type="password" placeholder="Password" name="password_register_form" />
 					<input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
-					<input  class="email" type="email" placeholder="Email" name="email_register_form" />
+					<input class="email" type="email" placeholder="Email" name="email_register_form" />
 					<select>
   					<option>Opcja 1</option>
   					<option>Opcja 2</option>
   					<option>Opcja 3</option>
 					</select>
-					<div class="checkbox">
+					<div class="checkbox_left">
 						<input type="checkbox" name="Checkbox" />
 						<label>I have read and accept the terms of use.</label>
 					</div>
-					<input class="submit1" type="submit" value="Sign up" />
+					<input class="submit_big" type="submit" value="Sign up" />
 				</form>
 			</div>
 
@@ -45,8 +45,11 @@
 					<input type="text" placeholder="Your Name" name="Username" />
 					<input type="email" placeholder="Your Email" name="Email" />
 					<textarea>Type your message...</textarea>
-					<label><input type="checkbox" name="Checkbox" />Send a copy to my Email</label>
-					<input type="submit" value="Send Email" />
+					<div class="checkbox_left">
+						<input type="checkbox" name="Checkbox" />
+						<label>Send a copy to my Email</label>
+					</div>
+					<input class="submit_big" type="submit" value="Send Email" />
 				</form>
 			</div>
 
@@ -59,8 +62,13 @@
 				<form class="form" method="post">
 					<input type="text" placeholder="Username" name="Username" />
 					<input type="password" placeholder="Password" name="Password" />
-					<label><input type="checkbox" name="Checkbox" />Remember me</label>
-					<input type="submit"value="Sign in" />
+					<div class="checkbox_right">
+						<input type="checkbox" name="Checkbox" />
+						<label>Remember me</label>
+					</div>
+					<div class="submit_right">
+						<input class="submit_small" type="submit" value="Sign in" />
+					</div>
 				</form>
 			</div>
 
@@ -69,8 +77,12 @@
 				<form class="form" method="post">
 					<input type="email" placeholder="Enter your Email" name="Email" />
 					<input type="number" placeholder="Enter your phone number" name="Phone_Number" />
-					<input type="submit" value="Send" />
-					<input type="submit" value="Done" />
+					<div class="submit_right">
+						<input class="submit_small" type="submit" value="Send" />
+					</div>
+					<div class="submit_right">
+						<input class="submit_small"type="submit" value="Done" />
+					</div>
 				</form>
 			</div>
 
@@ -78,19 +90,27 @@
 			<div id="subscribe_form">
 				<form class="form" method="post">
 					<input type="email" placeholder="Enter your Email" name="Email" />
-					<input type="submit" value="Subscribe" />
-					<input type="submit" value="No, Thanks" />
+					<div class="submit_right">
+						<input class="submit_small" type="submit" value="Subscribe" />
+					</div>
+					<div class="submit_right">
+						<input class="submit_small" type="submit" value="No, Thanks" />
+					</div>
 				</form>
 			</div>
 
 			<div id="footer">
-				<img src="images/footer_logo.jpg" alt="logo - footer"/>
-				<img src="images/footer_title.jpg" alt="title - footer"/>
-				<img src="images/footer_website.jpg" alt="website - footer"/>
+				<img src="images/footer_logo.jpg" alt="logo - footer" />
+				<img src="images/footer_title.jpg" alt="title - footer" />
+				<img src="images/footer_website.jpg" alt="website - footer" />
 			</div>
 
 		</section>
 
 	</div>
+
+	<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+
 </body>
+
 </html>

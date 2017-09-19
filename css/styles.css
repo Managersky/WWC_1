@@ -1,87 +1,132 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	background-image: url("../images/background.jpg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 #wrapper {
-	max-width: 1025px;
-	max-height: 1375px;
-	margin: 0 auto;
+    max-width: 1025px;
+    max-height: 1375px;
+    margin: 0 auto;
 }
 
 header img {
-	width: 200px;
-	display: inline;
+    width: 200px;
+    display: inline;
+}
+
+.form {
+    width: 100%;
 }
 
 h1 {
-	color: white;
+    color: white;
+    clear:both;
 }
 
 #left {
-	float: left;
+    float: left;
 }
 
 #right {
-	float: left;
+    float: left;
 }
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-	margin: 10px;
-	padding: 10px;
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    margin: 10px;
+    padding: 10px;
 }
 
-[type="text"], [type="password"], [type="email"], /*[type="submit"],*/
-select, textarea{
-	width: 80%;
-	margin: 10px;
-	padding: 10px;
+[type="text"], [type="password"], [type="email"], [type="number"],
+select, textarea {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
 }
 
-.checkbox {
-	width: 80%;
-	padding: 10px;
+.checkbox_left {
+    width: 80%;
+    padding: 10px;
 }
 
-.submit1 {
-	background-color: green;
-	width: 80%;
-	margin: 10px;
-	padding: 10px;
+.checkbox_right {
+    width: 45%;
+    padding: 10px;
+    float:left;
+}
+
+.submit_big {
+    background-color: green;
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.submit_small {
+    background-color: green;
+    width: 80%;
+    margin: 8px;
+    padding: 10px;
+}
+
+.submit_right {
+    width: 55%;
+    float:left;
 }
 
 #register_form {
-	background-color: white;
-	max-width: 430px;
-	max-height: 460px;
-	padding: 5%;
+    max-width: 430px;
+    max-height: 460px;
+    padding: 5%;
 }
 
 #send_email {
-	max-width: 430px;
+    max-width: 430px;
 }
 
 #sign_in_form {
-	max-width: 430px;
+    max-width: 430px;
+    max-height: 460px;
+    padding: 5%;
+}
+
+#sign_in_form:after {
+    content:'';
+    display:block;
+    clear:both;
 }
 
 #recover_form {
-	max-width: 430px;
+    max-width: 430px;
+    max-height: 460px;
+    padding: 5%;
+}
+
+#recover_form:after {
+    content:'';
+    display:block;
+    clear:both;
 }
 
 #subscribe_form {
-	max-width: 430px;
+    max-width: 430px;
+    max-height: 460px;
+    padding: 5%;
+}
+
+#subscribe_form:after {
+    content:'';
+    display:block;
+    clear:both;
 }
 
 #footer {
-	max-width: 430px;
+    max-width: 430px;
 }
