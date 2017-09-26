@@ -24,15 +24,21 @@ body {
 }
 
 #wrapper {
-    max-width: 1025px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1050px;
     max-height: 1375px;
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 header img {
-    width: 50%;
     opacity: 0.5;
-    margin: 0 auto;
 }
 
 .form {
@@ -43,19 +49,23 @@ header img {
     opacity: 0.5;
 }
 
+#left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+}
+
+#right {
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 50%;
+}
+
 h1 {
     font-family: Titillium_Medium;
     font-size: 32px;
     color: white;
     clear:both;
-}
-
-#left {
-    float: left;
-}
-
-#right {
-    float: left;
 }
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
@@ -92,76 +102,71 @@ select, textarea {
 
 .submit_big {
     background-color: 93d02b;
+    color: white;
     width: 80%;
     margin: 10px;
     padding: 10px;
 }
 
-.submit_small {
+.submit_small_green {
     background-color: 93d02b;
+    color: white;
     width: 80%;
     margin: 8px;
     padding: 10px;
 }
 
-.submit_small_2 {
+.submit_small_red {
     background-color: f4495b;
+    color: white;
     width: 80%;
     margin: 8px;
     padding: 10px;
 }
 
 .submit_right {
-    width: 55%;
+    width: 50%;
     float:left;
 }
 
 #register_form {
-    max-width: 430px;
-    max-height: 460px;
-    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 545px;
 }
 
 #send_email {
-    max-width: 430px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 650px;
 }
 
 #sign_in_form {
-    max-width: 430px;
-    max-height: 460px;
-    padding: 5%;
-}
-
-#sign_in_form:after {
-    content:'';
-    display:block;
-    clear:both;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 345px;
 }
 
 #recover_form {
-    max-width: 430px;
-    max-height: 460px;
-    padding: 5%;
-}
-
-#recover_form:after {
-    content:'';
-    display:block;
-    clear:both;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 325px;
 }
 
 #subscribe_form {
-    max-width: 430px;
-    max-height: 460px;
-    padding: 5%;
-}
-
-#subscribe_form:after {
-    content:'';
-    display:block;
-    clear:both;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 275px;
 }
 
 #footer {
-    max-width: 430px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
 }
