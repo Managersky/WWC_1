@@ -1,4 +1,8 @@
+/* Reset stylów przeglądarki */
+
 @import url(reset.css);
+
+/* Czcionki i ułożenie elementów na stronie */
 
 @font-face {
     font-family: Titillium_Light;
@@ -10,10 +14,21 @@ font-family: Titillium_Medium;
 src: url("../fonts/TitilliumText22L004.otf");
 }
 
+/* inny sposób na box-sizing
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -31,41 +46,20 @@ body {
     margin: 0 auto;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-header img {
-    opacity: 0.5;
-}
+/* Style ogólne */
 
 .form {
     width: 100%;
 }
 
-#footer img {
-    opacity: 0.5;
-}
-
-#left {
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 50%;
-}
-
-#right {
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 50%;
-}
-
 h1 {
     font-family: Titillium_Medium;
     font-size: 32px;
-    color: white;
-    clear:both;
+    color: #ffffff;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    height: 60px;
 }
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
@@ -77,48 +71,114 @@ h1 {
 select, textarea {
     font-family: Titillium_Light;
     font-size: 16px;
-    color: afafaf;
+    color: #afafaf;
+    height: 60px;
+    width: 370px;
+    margin: 10px;
+    padding: 10px;
+}
+
+textarea {
+    height: 225px;
+}
+
+/* Nagłówek */
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    margin: 25px auto;
+    opacity: 0.34;
+}
+
+/* Główna zawartość witryny */
+
+#left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0px 70px;
+}
+
+#register_form {
+    justify-content: center;
+    align-items: center;
+}
+
+#send_email {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.checkbox_left {
+    font-family: Myriad Pro;
+    font-size: 17px;
+    color: #afafaf;
+    width: 80%;
+    padding: 10px;
+}
+
+.submit_big {
+    background-color: #93d02b;
+    color: #ffffff;
+    font-family: Titillium_Light;
+    font-size: 24px;
     width: 80%;
     margin: 10px;
     padding: 10px;
 }
 
-.checkbox_left {
-    font-family: Myriad Pro;
-    font-size: 17,34px;
-    color: afafaf;
-    width: 80%;
-    padding: 10px;
+#right {
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0px 70px;
+}
+
+#sign_in_form {
+    justify-content: center;
+    align-items: center;
+}
+
+#recover_form {
+    justify-content: center;
+    align-items: center;
+}
+
+#subscribe_form {
+    justify-content: center;
+    align-items: center;
 }
 
 .checkbox_right {
     font-family: Myriad Pro;
-    font-size: 17,34px;
-    color: afafaf;
+    font-size: 17px;
+    color: #afafaf;
     width: 45%;
     padding: 10px;
     float:left;
 }
 
-.submit_big {
-    background-color: 93d02b;
-    color: white;
-    width: 80%;
-    margin: 10px;
-    padding: 10px;
-}
-
 .submit_small_green {
-    background-color: 93d02b;
-    color: white;
+    background-color: #93d02b;
+    color: #ffffff;
+    font-family: Titillium_Light;
+    font-size: 24px;
     width: 80%;
     margin: 8px;
     padding: 10px;
 }
 
 .submit_small_red {
-    background-color: f4495b;
-    color: white;
+    background-color: #f4495b;
+    color: #ffffff;
+    font-family: Titillium_Light;
+    font-size: 24px;
     width: 80%;
     margin: 8px;
     padding: 10px;
@@ -129,44 +189,15 @@ select, textarea {
     float:left;
 }
 
-#register_form {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 545px;
-}
-
-#send_email {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 650px;
-}
-
-#sign_in_form {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 345px;
-}
-
-#recover_form {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 325px;
-}
-
-#subscribe_form {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 275px;
-}
+/* Stopka */
 
 #footer {
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 250px;
 }
+
+#footer img {
+    opacity: 0.5;
+}
+
+/* Media Queries */
