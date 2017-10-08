@@ -33,7 +33,7 @@ html {
 
 body {
     background-image: url("../images/background.jpg");
-    background-position: center;
+    background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -62,9 +62,79 @@ h1 {
     height: 60px;
 }
 
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-    margin: 10px;
-    padding: 10px;
+.form .field {
+  display: flex;
+  height: 40px;
+  width: 90%;
+  margin: 25px auto;
+  border: 2px solid #c6c6c6;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  color: #afafaf;
+}
+
+.form .field .username,
+.form .field .password,
+.form .field .email,
+.form .field .location,
+.form .field .phone {
+  height: 25px;
+  width: 80%;
+  border: 0;
+  padding: 0 0 0 15px;
+  background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  font-size: 14px;
+}
+
+.form .field .user_icon,
+.form .field .pass_icon,
+.form .field .email_icon,
+.form .field .location_icon,
+.form .field .phone_icon {
+  position: relative;
+  height: 40px;
+  width: 19%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form .field .user_icon:after,
+.form .field .pass_icon:after,
+.email_icon:after,
+.form .field .location_icon:after,
+.form .field .phone_icon:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  height: 30px;
+  width: 2px;
+  background-color: #e4e4e4;
+}
+
+.form .field .user_icon {
+  background-image: url('../images/user.png');
+}
+
+.form .field .pass_icon {
+  background-image: url('../images/pass.png');
+}
+
+.form .field .email_icon {
+  background-image: url('../images/email.png');
+}
+
+.form .field .location_icon {
+  background-image: url('../images/location.png');
+}
+
+.form .field .phone_icon {
+  background-image: url('../images/phone.png');
+}
+
+input[type='checkbox'] {
+  display: none;
 }
 
 [type="text"], [type="password"], [type="email"], [type="number"],
@@ -119,8 +189,53 @@ header img {
     font-family: Myriad Pro;
     font-size: 17px;
     color: #afafaf;
-    width: 80%;
+    width: 90%;
     padding: 10px;
+    margin: 0 auto;
+}
+
+.checkbox_left label {
+  position: relative;
+}
+
+.checkbox_left span::before,
+.checkbox_left span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.checkbox_left span.checkbox::before {
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #f5f5f5;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+}
+
+.checkbox_left span.checkbox::after {
+    position: absolute;
+    left: -0.5%;
+    top: -50%;
+    margin-left: 7.5px;
+    margin-top: 5.5px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    border: none;
+}
+
+input[type="checkbox"]:checked + label span.checkbox::after {
+  background-color: #8ac915;
+}
+
+label[for="checkbox_1"] {
+  margin-left: 10px;
 }
 
 .submit_big {

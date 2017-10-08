@@ -23,19 +23,35 @@
 
 				<form class="form" method="post">
 					<h1>Register Form</h1>
-					<input class="username" type="text" placeholder="Username" name="username_register_form" />
-					<input class="password" type="password" placeholder="Password" name="password_register_form" />
-					<input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
-					<input class="email" type="email" placeholder="Email" name="email_register_form" />
-					<select>
-  					<option>Opcja 1</option>
-  					<option>Opcja 2</option>
-  					<option>Opcja 3</option>
-					</select>
-					<div class="checkbox_left">
-						<input type="checkbox" name="Checkbox" />
-						<label>I have read and accept the terms of use.</label>
+					 <div class="field">
+						 <span class="user_icon"></span>
+						 <input class="username" type="text" placeholder="Username" name="username_register_form" />
 					</div>
+					<div class="field">
+						 <span class="pass_icon"></span>
+						 <input class="password" type="password" placeholder="Password" name="password_register_form" />
+					</div>
+					<div class="field">
+						 <span class="pass_icon"></span>
+						 <input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
+					</div>
+					<div class="field">
+						 <span class="email_icon"></span>
+						 <input class="email" type="email" placeholder="Email" name="email_register_form" />
+					</div>
+					<div class="field">
+						 <span class="location_icon"></span>
+						 <select class="location">
+							 <option>Your Location</option>
+  							<option>Option 1</option>
+  							<option>Option 2</option>
+  							<option>Option 3</option>
+						</select>
+					</div>
+						<div class="checkbox_left">
+							<input type="checkbox" name="checkbox_1" id="checkbox_1" />
+							<label for="checkbox_1"><span class="checkbox"></span>I have read and accept the terms of use.</label>
+						</div>
 					<input class="submit_big" type="submit" value="Sign up" />
 				</form>
 			</div>
@@ -45,8 +61,14 @@
 
 				<form class="form" method="post">
 					<h1>Send Email</h1>
-					<input type="text" placeholder="Your Name" name="Username" />
-					<input type="email" placeholder="Your Email" name="Email" />
+					<div class="field">
+						<span class="user_icon"></span>
+						<input class="username" type="text" placeholder="Your Name" name="Username" />
+					</div>
+					<div class="field">
+						 <span class="email_icon"></span>
+						 <input class="email" type="email" placeholder="Your Email" name="Email" />
+					</div>
 					<textarea>Type your message...</textarea>
 					<div class="checkbox_left">
 						<input type="checkbox" name="Checkbox" />
@@ -63,8 +85,14 @@
 			<div id="sign_in_form">
 				<form class="form" method="post">
 					<h1>Sign In Form</h1>
-					<input type="text" placeholder="Username" name="Username" />
-					<input type="password" placeholder="Password" name="Password" />
+					<div class="field">
+						<span class="user_icon"></span>
+						<input class="username" type="text" placeholder="Username" name="Username" />
+					</div>
+					<div class="field">
+						 <span class="pass_icon"></span>
+						 <input class="password" type="password" placeholder="Password" name="Password" />
+					</div>
 					<div class="checkbox_right">
 						<input type="checkbox" name="Checkbox" />
 						<label>Remember me</label>
@@ -78,8 +106,14 @@
 			<div id="recover_form">
 				<form class="form" method="post">
 					<h1>Recover Form</h1>
-					<input type="email" placeholder="Enter your Email" name="Email" />
-					<input type="number" placeholder="Enter your phone number" name="Phone_Number" />
+					<div class="field">
+						 <span class="email_icon"></span>
+						 <input class="email" type="email" placeholder="Enter your Email" name="Email" />
+					</div>
+					<div class="field">
+						 <span class="phone_icon"></span>
+						 <input class="phone" type="number" placeholder="Enter your phone number" name="Phone_Number" />
+					</div>
 					<div class="submit_right">
 						<input class="submit_small_green" type="submit" value="Send" />
 					</div>
@@ -92,7 +126,10 @@
 			<div id="subscribe_form">
 				<form class="form" method="post">
 					<h1>Subscribe Form</h1>
-					<input type="email" placeholder="Enter your Email" name="Email" />
+					<div class="field">
+						 <span class="email_icon"></span>
+						 <input class="email" type="email" placeholder="Enter your Email" name="Email" />
+					</div>
 					<div class="submit_right">
 						<input class="submit_small_green" type="submit" value="Subscribe" />
 					</div>
