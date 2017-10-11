@@ -28,7 +28,6 @@ html {
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 body {
@@ -69,8 +68,20 @@ h1 {
   margin: 25px auto;
   border: 2px solid #c6c6c6;
   border-radius: 5px;
-  background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
   color: #afafaf;
+}
+
+.textarea {
+  display: flex;
+  height: 225px;
+  width: 90%;
+  margin: 25px auto;
+  border: 2px solid #c6c6c6;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  color: #afafaf;
+  resize:none;
 }
 
 .form .field .username,
@@ -82,7 +93,7 @@ h1 {
   width: 80%;
   border: 0;
   padding: 0 0 0 15px;
-  background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
   font-size: 14px;
 }
 
@@ -92,8 +103,7 @@ h1 {
 .form .field .location_icon,
 .form .field .phone_icon {
   position: relative;
-  height: 40px;
-  width: 19%;
+  width: 20%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -106,7 +116,7 @@ h1 {
   content: "";
   display: block;
   position: absolute;
-  top: 5px;
+  top: 4px;
   right: 0px;
   height: 30px;
   width: 2px;
@@ -138,18 +148,15 @@ input[type='checkbox'] {
 }
 
 [type="text"], [type="password"], [type="email"], [type="number"],
-select, textarea {
+select {
     font-family: Titillium_Light;
-    font-size: 16px;
     color: #afafaf;
-    height: 60px;
-    width: 370px;
-    margin: 10px;
-    padding: 10px;
+    margin: 6px;
 }
 
 textarea {
-    height: 225px;
+    font-family: Titillium_Light;
+    padding: 10px;
 }
 
 /* Nagłówek */
@@ -239,13 +246,16 @@ label[for="checkbox_1"] {
 }
 
 .submit_big {
-    background-color: #93d02b;
+    background: linear-gradient(to bottom, #94c93d, #99cc33); /* To do !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
     color: #ffffff;
     font-family: Titillium_Light;
     font-size: 24px;
+    text-shadow: 1px 1px #51850e;
     width: 80%;
     margin: 10px;
     padding: 10px;
+    border: 1px solid #3b9a00;
+    border-radius: 5px;
 }
 
 #right {
@@ -280,23 +290,29 @@ label[for="checkbox_1"] {
 }
 
 .submit_small_green {
-    background-color: #93d02b;
+    background: #93d02b;
     color: #ffffff;
     font-family: Titillium_Light;
     font-size: 24px;
+    text-shadow: 1px 1px #51850e;
     width: 80%;
     margin: 8px;
     padding: 10px;
+    border: 1px solid #3b9a00;
+    border-radius: 5px;
 }
 
 .submit_small_red {
-    background-color: #f4495b;
+    background: #f4495b;
     color: #ffffff;
     font-family: Titillium_Light;
     font-size: 24px;
+    text-shadow: 1px 1px #51850e;
     width: 80%;
     margin: 8px;
     padding: 10px;
+    border: 1px solid #ce3b49;
+    border-radius: 5px;
 }
 
 .submit_right {
@@ -306,13 +322,9 @@ label[for="checkbox_1"] {
 
 /* Stopka */
 
-#footer {
-    justify-content: center;
-    align-items: center;
-}
-
 #footer img {
-    opacity: 0.5;
+    margin: 40px auto;
+    opacity: 0.34;
 }
 
 /* Media Queries */
