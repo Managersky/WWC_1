@@ -43,14 +43,15 @@
 						 <span class="location_icon"></span>
 						 <select class="location">
 							 <option>Your Location</option>
-  							<option>Option 1</option>
-  							<option>Option 2</option>
-  							<option>Option 3</option>
+  							<option>Gliwice</option>
+  							<option>Zabrze</option>
+  							<option>Sosnowiec</option>
 						</select>
 					</div>
-						<div class="checkbox_left">
+						<div class="checkbox_action">
 							<input type="checkbox" name="checkbox_1" id="checkbox_1" />
-							<label for="checkbox_1"><span class="checkbox"></span>I have read and accept the terms of use.</label>
+							<label for="checkbox_1"><span class="checkbox"></span></label>
+							<label class="label_text">I have read and accept the terms of use.</label>
 						</div>
 					<input class="submit_big" type="submit" value="Sign up" />
 				</form>
@@ -70,9 +71,10 @@
 						 <input class="email" type="email" placeholder="Your Email" name="Email" />
 					</div>
 						<textarea class="textarea">Type your message...</textarea>
-					<div class="checkbox_left">
-						<input type="checkbox" name="Checkbox" />
-						<label>Send a copy to my Email</label>
+					<div class="checkbox_action">
+						<input type="checkbox" name="checkbox_2" id="checkbox_2" />
+						<label for="checkbox_2"><span class="checkbox"></span></label>
+						<label class="label_text">Send a copy to my Email</label>
 					</div>
 					<input class="submit_big" type="submit" value="Send Email" />
 				</form>
@@ -93,9 +95,16 @@
 						 <span class="pass_icon"></span>
 						 <input class="password" type="password" placeholder="Password" name="Password" />
 					</div>
-					<div class="checkbox_right">
-						<input type="checkbox" name="Checkbox" />
-						<label>Remember me</label>
+					<div class="submit_right">
+						<div id="checkbox_right">
+							<div class="checkbox_action">
+								<input type="checkbox" name="checkbox_3" id="checkbox_3" />
+								<label for="checkbox_3">
+									<span class="checkbox"></span>
+								</label>
+								<label class="label_text">Remember me</label>
+							</div>
+						</div>
 					</div>
 					<div class="submit_right">
 						<input class="submit_small_green" type="submit" value="Sign in" />
@@ -118,7 +127,7 @@
 						<input class="submit_small_green" type="submit" value="Send" />
 					</div>
 					<div class="submit_right">
-						<input class="submit_small_green"type="submit" value="Done" />
+						<input class="submit_small_green" type="submit" value="Done" />
 					</div>
 				</form>
 			</div>
