@@ -5,12 +5,12 @@
 /* Czcionki i ułożenie elementów na stronie */
 
 @font-face {
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     src: url("../fonts/TitilliumText22L002.otf");
 }
 
 @font-face {
-font-family: Titillium_Medium;
+font-family: 'Titillium_Medium';
 src: url("../fonts/TitilliumText22L004.otf");
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 h1 {
-    font-family: Titillium_Medium;
+    font-family: 'Titillium_Medium';
     font-size: 32px;
     color: #ffffff;
     clear: both;
@@ -149,13 +149,13 @@ input[type='checkbox'] {
 
 [type="text"], [type="password"], [type="email"], [type="number"],
 select {
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     color: #afafaf;
     margin: 6px;
 }
 
 textarea {
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     padding: 10px;
 }
 
@@ -184,16 +184,37 @@ header img {
 #register_form {
     justify-content: center;
     align-items: center;
+    min-height: 420px;
+    width: 380px;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    padding-top: 1px;
+}
+
+#register_form h1 {
+    position: absolute;
+    left: 310;
+    top: 160;
 }
 
 #send_email {
     justify-content: center;
     align-items: center;
-    padding-bottom: 25px;
+    min-height: 420px;
+    width: 380px;
+    margin-top: 100px;
+    background-color: #f4f4f4;
+    padding-top: 1px;
+}
+
+#send_email h1 {
+    position: absolute;
+    left: 320;
+    top: 725;
 }
 
 .checkbox_left {
-    font-family: Myriad Pro;
+    font-family: 'Myriad Pro';
     font-size: 17px;
     color: #afafaf;
     width: 90%;
@@ -246,9 +267,9 @@ label[for="checkbox_1"] {
 }
 
 .submit_big {
-    background: linear-gradient(to bottom, #94c93d, #99cc33); /* To do !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    background: linear-gradient(to bottom, #a3d740, #7ec31f);
     color: #ffffff;
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     font-size: 24px;
     text-shadow: 1px 1px #51850e;
     width: 80%;
@@ -268,20 +289,39 @@ label[for="checkbox_1"] {
 #sign_in_form {
     justify-content: center;
     align-items: center;
+    min-height: 420px;
+    width: 380px;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    padding-top: 1px;
+}
+
+#sign_in_form h1 {
+    position: absolute;
+    left: 840;
+    top: 160;
 }
 
 #recover_form {
     justify-content: center;
     align-items: center;
+    min-height: 420px;
+    width: 380px;
+    margin-top: 50px;
+    background-color: #f4f4f4;
 }
 
 #subscribe_form {
     justify-content: center;
     align-items: center;
+    min-height: 420px;
+    width: 380px;
+    margin-top: 50px;
+    background-color: #f4f4f4;
 }
 
 .checkbox_right {
-    font-family: Myriad Pro;
+    font-family: 'Myriad Pro';
     font-size: 17px;
     color: #afafaf;
     width: 45%;
@@ -290,9 +330,9 @@ label[for="checkbox_1"] {
 }
 
 .submit_small_green {
-    background: #93d02b;
+    background: linear-gradient(to bottom, #a3d740, #7ec31f);
     color: #ffffff;
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     font-size: 24px;
     text-shadow: 1px 1px #51850e;
     width: 80%;
@@ -303,9 +343,9 @@ label[for="checkbox_1"] {
 }
 
 .submit_small_red {
-    background: #f4495b;
+    background: linear-gradient(to bottom, #f65e70, #f03848);
     color: #ffffff;
-    font-family: Titillium_Light;
+    font-family: 'Titillium_Light';
     font-size: 24px;
     text-shadow: 1px 1px #51850e;
     width: 80%;
