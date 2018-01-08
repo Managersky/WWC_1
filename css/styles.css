@@ -345,7 +345,7 @@ label[for="checkbox_1"] {
 .submit_small_red {
     background: linear-gradient(to bottom, #f65e70, #f03848);
     color: #ffffff;
-    font-family: 'Titillium_Light';
+    font-family: Titillium_Light;
     font-size: 24px;
     text-shadow: 1px 1px #51850e;
     width: 80%;
