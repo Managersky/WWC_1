@@ -13,150 +13,149 @@
 	<div id="wrapper">
 
 		<header>
-			<img src="images/top_logo.png" alt="logo - header" />
+			<img src="images/top_logo.png" alt="masteralb-logo-top" />
 		</header>
 
-		<section id="left">
-
+		<section id="left-column">
 
 			<div id="register_form">
-
-				<form class="form" method="post">
-					<h1>Register Form</h1>
-					 <div class="field">
-						 <span class="user_icon"></span>
-						 <input class="username" type="text" placeholder="Username" name="username_register_form" />
-					</div>
-					<div class="field">
-						 <span class="pass_icon"></span>
-						 <input class="password" type="password" placeholder="Password" name="password_register_form" />
-					</div>
-					<div class="field">
-						 <span class="pass_icon"></span>
-						 <input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
-					</div>
-					<div class="field">
-						 <span class="email_icon"></span>
-						 <input class="email" type="email" placeholder="Email" name="email_register_form" />
-					</div>
-					<div class="field">
-						 <span class="location_icon"></span>
-						 <select class="location">
-							 <option>Your Location</option>
-  							<option>Gliwice</option>
-  							<option>Zabrze</option>
-  							<option>Sosnowiec</option>
-						</select>
-					</div>
-						<div class="checkbox_action">
-							<input type="checkbox" name="checkbox_1" id="checkbox_1" />
-							<label for="checkbox_1"><span class="checkbox"></span></label>
-							<label class="label_text">I have read and accept the terms of use.</label>
+				<h1>Register Form</h1>
+				<div class="border">
+					<form class="form" method="post">
+					 	<div class="field">
+						 	<span class="user_icon"></span>
+						 	<input class="username" type="text" placeholder="Username" name="username_register_form" />
 						</div>
-					<input class="submit_big" type="submit" value="Sign up" />
-				</form>
+						<div class="field">
+						 	<span class="pass_icon"></span>
+						 	<input class="password" type="password" placeholder="Password" name="password_register_form" />
+						</div>
+						<div class="field">
+						 	<span class="pass_icon"></span>
+						 	<input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
+						</div>
+						<div class="field">
+						 	<span class="email_icon"></span>
+							<input class="email" type="email" placeholder="Email" name="email_register_form" />
+						</div>
+						<div class="field">
+						 	<span class="location_icon"></span>
+						 	<select class="location">
+								<option>Your Location</option>
+  								<option>Gliwice</option>
+  								<option>Zabrze</option>
+  								<option>Sosnowiec</option>
+							</select>
+						</div>
+						<input type="checkbox" id="register-checkbox" />
+						<label for="register-checkbox">
+							<p>I have read and accept the terms of use</p>
+						</label>
+						<input class="submit_big" type="submit" value="Sign up" />
+					</form>
+				</div>
 			</div>
-
 
 			<div id="send_email">
-
-				<form class="form" method="post">
-					<h1>Send Email</h1>
-					<div class="field">
-						<span class="user_icon"></span>
-						<input class="username" type="text" placeholder="Your Name" name="Username" />
-					</div>
-					<div class="field">
-						 <span class="email_icon"></span>
-						 <input class="email" type="email" placeholder="Your Email" name="Email" />
-					</div>
+				<h1>Send Email</h1>
+				<div class="border">
+					<form class="form" method="post">
+						<div class="field">
+							<span class="user_icon"></span>
+							<input class="username" type="text" placeholder="Your Name" name="Username" />
+						</div>
+						<div class="field">
+						 	<span class="email_icon"></span>
+						 	<input class="email" type="email" placeholder="Your Email" name="Email" />
+						</div>
 						<textarea class="textarea">Type your message...</textarea>
-					<div class="checkbox_action">
-						<input type="checkbox" name="checkbox_2" id="checkbox_2" />
-						<label for="checkbox_2"><span class="checkbox"></span></label>
-						<label class="label_text">Send a copy to my Email</label>
-					</div>
-					<input class="submit_big" type="submit" value="Send Email" />
-				</form>
+						<input type="checkbox" id="email-checkbox" />
+						<label for="email-checkbox">
+							<p>Send a copy to my Email</p>
+						</label>
+						<input class="submit_big" type="submit" value="Send Email" />
+					</form>
+				</div>
 			</div>
-
 		</section>
 
-		<section id="right">
+		<section id="right-column">
 
 			<div id="sign_in_form">
-				<form class="form" method="post">
-					<h1>Sign In Form</h1>
-					<div class="field">
-						<span class="user_icon"></span>
-						<input class="username" type="text" placeholder="Username" name="Username" />
-					</div>
-					<div class="field">
-						 <span class="pass_icon"></span>
-						 <input class="password" type="password" placeholder="Password" name="Password" />
-					</div>
-					<div class="submit_right">
-						<div id="checkbox_right">
-							<div class="checkbox_action">
-								<input type="checkbox" name="checkbox_3" id="checkbox_3" />
-								<label for="checkbox_3">
-									<span class="checkbox"></span>
-								</label>
-								<label class="label_text">Remember me</label>
-							</div>
+				<h1>Sign In Form</h1>
+				<div class="border">
+					<form class="form" method="post">
+						<div class="field">
+							<span class="user_icon"></span>
+							<input class="username" type="text" placeholder="Username" name="Username" />
 						</div>
-					</div>
-					<div class="submit_right">
-						<input class="submit_small_green" type="submit" value="Sign in" />
-					</div>
-				</form>
+						<div class="field">
+							<span class="pass_icon"></span>
+							<input class="password" type="password" placeholder="Password" name="Password" />
+						</div>
+						<div class="small_checkbox">
+						<input type="checkbox" id="sign-checkbox" />
+						<label for="sign-checkbox">
+							<p>Remember me</p>
+						</label>
+						</div>
+						<div class="submit_right">
+							<input class="submit_small_green" type="submit" value="Sign in" />
+						</div>
+						<div class="clear_float"></div>
+					</form>
+				</div>
 			</div>
 
 			<div id="recover_form">
-				<form class="form" method="post">
-					<h1>Recover Form</h1>
-					<div class="field">
-						 <span class="email_icon"></span>
-						 <input class="email" type="email" placeholder="Enter your Email" name="Email" />
-					</div>
-					<div class="field">
-						 <span class="phone_icon"></span>
-						 <input class="phone" type="number" placeholder="Enter your phone number" name="Phone_Number" />
-					</div>
-					<div class="submit_right">
-						<input class="submit_small_green" type="submit" value="Send" />
-					</div>
-					<div class="submit_right">
-						<input class="submit_small_green" type="submit" value="Done" />
-					</div>
-				</form>
+				<h1>Recover Form</h1>
+				<div class="border">
+					<form class="form" method="post">
+						<div class="field">
+						 	<span class="email_icon"></span>
+							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
+						</div>
+						<div class="field">
+							<span class="phone_icon"></span>
+							<input class="phone" type="number" placeholder="Enter your phone number" name="Phone_Number" />
+						</div>
+						<div class="submit_right">
+							<input class="submit_small_green" type="submit" value="Done" />
+						</div>
+						<div class="submit_right">
+							<input class="submit_small_green" type="submit" value="Send" />
+						</div>
+						<div class="clear_float"></div>
+					</form>
+				</div>
 			</div>
 
 			<div id="subscribe_form">
-				<form class="form" method="post">
-					<h1>Subscribe Form</h1>
-					<div class="field">
-						 <span class="email_icon"></span>
-						 <input class="email" type="email" placeholder="Enter your Email" name="Email" />
-					</div>
-					<div class="submit_right">
-						<input class="submit_small_green" type="submit" value="Subscribe" />
-					</div>
-					<div class="submit_right">
-						<input class="submit_small_red" type="submit" value="No, Thanks" />
-					</div>
-				</form>
+				<h1>Subscribe Form</h1>
+				<div class="border">
+					<form class="form" method="post">
+						<div class="field">
+							<span class="email_icon"></span>
+							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
+						</div>
+						<div class="submit_right">
+							<input class="submit_small_red" type="submit" value="No, Thanks" />
+						</div>
+						<div class="submit_right">
+							<input class="submit_small_green" type="submit" value="Subscribe" />
+						</div>
+						<div class="clear_float"></div>
+					</form>
+				</div>
 			</div>
-
+			
 			<div id="footer">
-				<img src="images/bottom_logo.png" alt="logo - footer" />
+				<img src="images/footer_logo.png" alt="masteralb-logo-footer" />
 			</div>
 
 		</section>
 
 	</div>
-
-	<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 
 </body>
 
