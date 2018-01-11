@@ -33,9 +33,8 @@ body {
 #wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    
 }
 
 /* Style ogólne */
@@ -198,14 +197,21 @@ header img {
 /* Główna zawartość witryny */
 
 #left-column {
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+#right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 #register_form,
 #send_email {
-    justify-content: center;
-    align-items: center;
     width: 430px;
     margin: 0px 45px;
     padding-top: 1px;
@@ -226,16 +232,9 @@ header img {
     border-radius: 5px;
 }
 
-#right-column {
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
 #sign_in_form,
 #recover_form,
 #subscribe_form {
-    justify-content: center;
-    align-items: center;
     width: 430px;
     margin: 0px 45px;
     padding-top: 1px;
@@ -275,6 +274,15 @@ header img {
     border-radius: 5px;
 }
 
+.submit_small_green:hover,
+.submit_big:hover {
+    box-shadow: 2px 2px 5px rgba(22, 139, 22, 0.45);
+}
+
+.submit_small_red:hover {
+    box-shadow: 2px 2px 5px rgba(219, 8, 8, 0.45);
+}
+
 .small_checkbox {
     float: left;
     width: 50%;
@@ -282,7 +290,7 @@ header img {
 }
 
 .submit_right {
-    float: right;
+    float: left;
     width: 50%;
 }
 
@@ -290,15 +298,20 @@ header img {
     clear: both
 }
 
-/* Stopka */
-
-#footer {
+#logo {
     text-align: center;
 }
 
-#footer img {
+#logo img {
     margin: 40px auto;
     opacity: 0.2;
+}
+
+/* Stopka */
+
+footer {
+    width: 100%;
+    margin: 20px;
 }
 
 /* Media Queries */

@@ -21,7 +21,7 @@
 			<div id="register_form">
 				<h1>Register Form</h1>
 				<div class="border">
-					<form class="form" method="post">
+					<form action="#" class="form" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
 						 	<input class="username" type="text" placeholder="Username" name="username_register_form" />
@@ -51,7 +51,7 @@
 						<label for="register-checkbox">
 							<p>I have read and accept the terms of use</p>
 						</label>
-						<input class="submit_big" type="submit" value="Sign up" />
+						<input class="submit_big" type="submit" disabled value="Sign up" />
 					</form>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 			<div id="send_email">
 				<h1>Send Email</h1>
 				<div class="border">
-					<form class="form" method="post">
+					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
 							<input class="username" type="text" placeholder="Your Name" name="Username" />
@@ -68,12 +68,12 @@
 						 	<span class="email_icon"></span>
 						 	<input class="email" type="email" placeholder="Your Email" name="Email" />
 						</div>
-						<textarea class="textarea">Type your message...</textarea>
+						<textarea class="textarea" placeholder="Type your message..."></textarea>
 						<input type="checkbox" id="email-checkbox" />
 						<label for="email-checkbox">
 							<p>Send a copy to my Email</p>
 						</label>
-						<input class="submit_big" type="submit" value="Send Email" />
+						<input class="submit_big" type="submit" disabled value="Send Email" />
 					</form>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 			<div id="sign_in_form">
 				<h1>Sign In Form</h1>
 				<div class="border">
-					<form class="form" method="post">
+					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
 							<input class="username" type="text" placeholder="Username" name="Username" />
@@ -100,7 +100,7 @@
 						</label>
 						</div>
 						<div class="submit_right">
-							<input class="submit_small_green" type="submit" value="Sign in" />
+							<input class="submit_small_green" type="submit" disabled value="Sign in" />
 						</div>
 						<div class="clear_float"></div>
 					</form>
@@ -110,20 +110,20 @@
 			<div id="recover_form">
 				<h1>Recover Form</h1>
 				<div class="border">
-					<form class="form" method="post">
+					<form action="#" class="form" method="post">
 						<div class="field">
 						 	<span class="email_icon"></span>
 							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
-							<input class="phone" type="number" placeholder="Enter your phone number" name="Phone_Number" />
+							<input class="phone" type="number" max="9" placeholder="Enter your phone number" name="Phone_Number" />
 						</div>
 						<div class="submit_right">
-							<input class="submit_small_green" type="submit" value="Done" />
+							<input class="submit_small_green" type="submit" disabled value="Send" />
 						</div>
 						<div class="submit_right">
-							<input class="submit_small_green" type="submit" value="Send" />
+							<input class="submit_small_green" type="submit" disabled value="Done" />
 						</div>
 						<div class="clear_float"></div>
 					</form>
@@ -133,28 +133,30 @@
 			<div id="subscribe_form">
 				<h1>Subscribe Form</h1>
 				<div class="border">
-					<form class="form" method="post">
+					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="email_icon"></span>
 							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
 						</div>
 						<div class="submit_right">
-							<input class="submit_small_red" type="submit" value="No, Thanks" />
+							<input class="submit_small_green" type="submit" disabled value="Subscribe" />
 						</div>
 						<div class="submit_right">
-							<input class="submit_small_green" type="submit" value="Subscribe" />
+							<input class="submit_small_red" type="submit" disabled value="No, Thanks" />
 						</div>
 						<div class="clear_float"></div>
 					</form>
 				</div>
 			</div>
 			
-			<div id="footer">
+			<div id="logo">
 				<img src="images/footer_logo.png" alt="masteralb-logo-footer" />
 			</div>
 
 		</section>
 
+		<footer></footer>
+		
 	</div>
 
 </body>
