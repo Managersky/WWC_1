@@ -20,7 +20,7 @@ src: url("../fonts/TitilliumText22L004.otf");
     -ms-box-sizing: border-box; /* ie8 */
     -webkit-box-sizing: border-box; /* safari3 */
     -khtml-box-sizing: border-box; /* konqueror */
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #afafaf;
 }
 
@@ -38,6 +38,11 @@ body {
 }
 
 /* Style ogólne */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 h1 {
     font-family: 'Titillium_Medium';
@@ -314,4 +319,4 @@ footer {
     margin: 20px;
 }
 
-/* Media Queries */
+/* Media Queries - style stosowane w zależności od tego w jakiej rozdzielczości wyświetlana jest strona */
