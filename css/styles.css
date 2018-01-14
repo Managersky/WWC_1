@@ -20,7 +20,7 @@ src: url("../fonts/TitilliumText22L004.otf");
     -ms-box-sizing: border-box; /* ie8 */
     -webkit-box-sizing: border-box; /* safari3 */
     -khtml-box-sizing: border-box; /* konqueror */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Titillium',sans-serif;
     color: #afafaf;
 }
 
