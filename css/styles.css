@@ -27,7 +27,7 @@ src: url("../fonts/TitilliumText22L004.otf");
 body {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 #wrapper {
@@ -216,7 +216,10 @@ header img {
 }
 
 #register_form,
-#send_email {
+#send_email,
+#sign_in_form,
+#recover_form,
+#subscribe_form {
     width: 430px;
     margin: 0px 45px;
     padding-top: 1px;
@@ -235,15 +238,6 @@ header img {
     padding: 10px;
     border: 1px solid #3b9a00;
     border-radius: 5px;
-}
-
-#sign_in_form,
-#recover_form,
-#subscribe_form {
-    width: 430px;
-    margin: 0px 45px;
-    padding-top: 1px;
-    padding-bottom: 1px;
 }
 
 .submit_small_green {
@@ -304,7 +298,10 @@ header img {
 }
 
 #logo {
-    text-align: center;
+    /*text-align: center;*/
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 #logo img {
@@ -320,3 +317,48 @@ footer {
 }
 
 /* Media Queries - style stosowane w zależności od tego w jakiej rozdzielczości wyświetlana jest strona */
+
+@media (max-width: 480px) {
+    img {
+        max-width: 80%;
+    }
+    h1 {
+        font-size: 25px;
+        padding: 10px;
+    }
+    .border {
+        padding: 10px;
+    }
+    .form {
+        width: 290px;
+    }
+    p {
+        font-size: 15px;
+    }
+    label[for="sign-checkbox"] p {
+        font-size: 13px;
+        padding: 0px;
+    }
+    #register_form,
+    #send_email,
+    #sign_in_form,
+    #recover_form,
+    #subscribe_form {
+        width: 310px;
+    }
+    .form .field .username,
+    .form .field .password,
+    .form .field .email,
+    .form .field .location,
+    .form .field .phone {
+        font-size: 12px;
+    }
+    .submit_big,
+    .submit_small_green,
+    .submit_small_red {
+        font-size: 12px;
+    }
+    .small_checkbox {
+        margin-top: 5px;
+    }
+}
