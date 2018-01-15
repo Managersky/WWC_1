@@ -298,7 +298,6 @@ header img {
 }
 
 #logo {
-    /*text-align: center;*/
     display: flex;
     align-items: center;
     width: 100%;
