@@ -1,10 +1,10 @@
-Moja pierwsza strona:
+My first website:
 
-Cel:
--Podstawy HTML/CSS
--Zastosowanie Flex Box'a
--Zapoznanie siê z RWD
+Purpose:
+- Understand basics of HTML/CSS
+- Use Flex
+- Get to know Responsive Web Design
 
-Problemy:
-- pozycjonowanie elementów
-- ustawienie przycisków obok siebie (zastosowa³em float:left)
+Problems:
+- Layout and positioning elements
+- positioning elements next to each other (I use float:left)

@@ -32,9 +32,9 @@ body {
 
 #wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Style ogólne */
@@ -70,7 +70,6 @@ h1 {
 
 .form .field {
   display: flex;
-  height: 40px;
   width: 90%;
   margin: 25px auto;
   border: 2px solid #c6c6c6;
@@ -81,7 +80,7 @@ h1 {
 
 .textarea {
   display: flex;
-  height: 225px;
+  min-height: 225px;
   width: 90%;
   margin: 25px auto;
   border: 2px solid #c6c6c6;
@@ -190,7 +189,7 @@ select {
 
 header {
     display: flex;
-    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -220,39 +219,29 @@ header img {
 #sign_in_form,
 #recover_form,
 #subscribe_form {
-    width: 430px;
     margin: 0px 45px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+}
+
+.btn {
+    display: block;
+    background: linear-gradient(to bottom, #a3d740, #7ec31f);
+    color: #ffffff;
+    font-family: 'Titillium_Light';
+    font-size: 24px;
+    text-shadow: 1px 1px #51850e;
+    padding: 10px;
+    border: 1px solid #3b9a00;
+    border-radius: 5px;
 }
 
 .submit_big {
-    display: block;
-    background: linear-gradient(to bottom, #a3d740, #7ec31f);
-    color: #ffffff;
-    font-family: 'Titillium_Light';
-    font-size: 24px;
-    text-shadow: 1px 1px #51850e;
     width: 90%;
-    margin: 15 auto;
-    padding: 10px;
-    border: 1px solid #3b9a00;
-    border-radius: 5px;
+    margin: 15 auto;  
 }
 
 .submit_small_green {
-    background: linear-gradient(to bottom, #a3d740, #7ec31f);
-    color: #ffffff;
-    font-family: 'Titillium_Light';
-    font-size: 24px;
-    text-shadow: 1px 1px #51850e;
     width: 80%;
-    display: block;
     margin: 0 auto 10 auto;
-    padding: 10px;
-    border: 1px solid #3b9a00;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
 .submit_small_green[value="Done"] {
@@ -261,16 +250,10 @@ header img {
 
 .submit_small_red {
     background: linear-gradient(to bottom, #f65e70, #f03848);
-    color: #ffffff;
-    font-family: 'Titillium_Light';
-    font-size: 24px;
     text-shadow: 1px 1px #a2202a;
     width: 80%;
-    display: block;
     margin: 0 auto 10 auto;
-    padding: 10px;
     border: 1px solid #ce3b49;
-    border-radius: 5px;
 }
 
 .submit_small_green:hover,
