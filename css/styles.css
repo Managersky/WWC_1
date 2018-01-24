@@ -160,7 +160,7 @@ input[type="checkbox"] {
     border: 1px solid #c6c6c6;
     border-radius: 2px;
     -webkit-appearance: none;
-    margin: 0px 20px;
+    margin-right: 20px;
 }
 
 input[type="checkbox"]:hover {
@@ -193,23 +193,31 @@ header {
     width: 100%;
 }
 
-header img {
+header a img {
+    display: flex;
+    justify-content: center;
     margin: 40px auto;
     opacity: 0.45;
 }
 
 /* Główna zawartość witryny */
 
-#left-column {
+main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+#left-column {
+    display: flex;
     align-items: center;
     flex-flow: column wrap;
 }
 
 #right-column {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-flow: column wrap;
 }
@@ -220,6 +228,19 @@ header img {
 #recover_form,
 #subscribe_form {
     margin: 0px 45px;
+}
+
+.checkbox_section {
+    display: flex;
+    align-items: center;
+    font-family: 'Myriad Pro';
+    font-size: 17px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.small {
+    width: 55%;
 }
 
 .btn {
@@ -240,8 +261,7 @@ header img {
 }
 
 .submit_small_green {
-    width: 80%;
-    margin: 0 auto 10 auto;
+    width: 45%;
 }
 
 .submit_small_green[value="Done"] {
@@ -251,8 +271,7 @@ header img {
 .submit_small_red {
     background: linear-gradient(to bottom, #f65e70, #f03848);
     text-shadow: 1px 1px #a2202a;
-    width: 80%;
-    margin: 0 auto 10 auto;
+    width: 45%;
     border: 1px solid #ce3b49;
 }
 
@@ -265,28 +284,24 @@ header img {
     box-shadow: 2px 2px 5px rgba(219, 8, 8, 0.45);
 }
 
-.small_checkbox {
-    float: left;
-    width: 50%;
-    margin-top: 15px;
+.content_to_send {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
 }
 
-.submit_right {
-    float: left;
-    width: 50%;
-}
-
-.clear_float {
-    clear: both
-}
+/* Bottom Logo */
 
 #logo {
-    display: flex;
-    align-items: center;
     width: 100%;
+    margin-top: 10%;
 }
 
-#logo img {
+#logo a img {
+    display: flex;
+    justify-content: center;
     margin: 40px auto;
     opacity: 0.2;
 }
@@ -327,6 +342,7 @@ footer {
     #recover_form,
     #subscribe_form {
         width: 310px;
+        margin: 0;
     }
     .form .field .username,
     .form .field .password,

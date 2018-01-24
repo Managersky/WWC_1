@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!Poprawienie wyświetlania strony w przeglądarkach IE!>
 	<title>WWC-1</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/scripts.js" async></script>
 </head>
 
 <body>
@@ -14,26 +15,29 @@
 	<div id="wrapper">
 
 		<header>
-			<img src="images/top_logo.png" alt="masteralb-logo-top" />
+			<a href="">
+				<img src="images/top_logo.png" alt="masteralb-logo-top" />
+			</a>	
 		</header>
 
-		<section id="left-column">
+		<main>
+		<div id="left-column">
 
-			<div id="register_form">
+			<section id="register_form">
 				<h1>Register Form</h1>
 				<div class="border">
 					<form action="#" class="form" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
-						 	<input class="username" type="text" placeholder="Username" name="username_register_form" />
+						 	<input name="username_register_form" class="username" type="text" placeholder="Username" />
+						 </div>
+						<div class="field">
+						 	<span class="pass_icon"></span>
+						 	<input name="password_register_form"class="password" type="password" placeholder="Password" />
 						</div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input class="password" type="password" placeholder="Password" name="password_register_form" />
-						</div>
-						<div class="field">
-						 	<span class="pass_icon"></span>
-						 	<input class="password" type="password" placeholder="Confirm Password" name="confirm_Password_register_form" />
+						 	<input name="confirm_Password_register_form"class="password" type="password" placeholder="Confirm Password" />
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
@@ -48,114 +52,106 @@
   								<option>Sosnowiec</option>
 							</select>
 						</div>
-						<input type="checkbox" id="register-checkbox" />
-						<label for="register-checkbox">
-							<p>I have read and accept the terms of use</p>
-						</label>
-						<input class="btn submit_big" type="submit" disabled value="Sign up" />
+						<div class="checkbox_section">
+							<input type="checkbox" id="register-checkbox" />
+							<label for="register-checkbox">I have read and accept the terms of use</label>
+						</div>
+						<input class="btn submit_big" type="submit" value="Sign up" disabled />
 					</form>
 				</div>
-			</div>
+			</section>
 
-			<div id="send_email">
+			<section id="send_email">
 				<h1>Send Email</h1>
 				<div class="border">
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input class="username" type="text" placeholder="Your Name" name="Username" />
+							<input name="Username"class="username" type="text" placeholder="Your Name" />
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-						 	<input class="email" type="email" placeholder="Your Email" name="Email" />
+						 	<input name="Email"class="email" type="email" placeholder="Your Email" />
 						</div>
 						<textarea class="textarea" placeholder="Type your message..."></textarea>
-						<input type="checkbox" id="email-checkbox" />
-						<label for="email-checkbox">
-							<p>Send a copy to my Email</p>
-						</label>
+						<div class="checkbox_section">
+							<input type="checkbox" id="email-checkbox" />
+							<label for="email-checkbox">Send a copy to my Email</label>
+						</div>
 						<input class="btn submit_big" type="submit" disabled value="Send Email" />
 					</form>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 
-		<section id="right-column">
+		<div id="right-column">
 
-			<div id="sign_in_form">
+			<section id="sign_in_form">
 				<h1>Sign In Form</h1>
 				<div class="border">
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input class="username" type="text" placeholder="Username" name="Username" />
+							<input name="Username"class="username" type="text" placeholder="Username" />
 						</div>
 						<div class="field">
 							<span class="pass_icon"></span>
-							<input class="password" type="password" placeholder="Password" name="Password" />
+							<input name="Password"class="password" type="password" placeholder="Password" />
 						</div>
-						<div class="small_checkbox">
-						<input type="checkbox" id="sign-checkbox" />
-						<label for="sign-checkbox">
-							<p>Remember me</p>
-						</label>
-						</div>
-						<div class="submit_right">
+						<div class="content_to_send">
+							<div class="checkbox_section small">
+								<input type="checkbox" id="sign-checkbox" />
+								<label for="sign-checkbox">Remember me</label>
+							</div>
 							<input class="btn submit_small_green" type="submit" disabled value="Sign in" />
 						</div>
-						<div class="clear_float"></div>
 					</form>
 				</div>
-			</div>
+			</section>
 
-			<div id="recover_form">
+			<section id="recover_form">
 				<h1>Recover Form</h1>
 				<div class="border">
 					<form action="#" class="form" method="post">
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
+							<input name="Email"class="email" type="email" placeholder="Enter your Email" />
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
-							<input class="phone" type="number" max="9" placeholder="Enter your phone number" name="Phone_Number" />
+							<input name="Phone_Number"class="phone" type="number" max="9" placeholder="Enter your phone number" />
 						</div>
-						<div class="submit_right">
-							<input class="btn submit_small_green" type="submit" disabled value="Send" />
+						<div class="content_to_send">
+							<input class="btn submit_small_green" type="submit" value="Send" disabled />
+							<input class="btn submit_small_green" type="submit" value="Done" disabled />
 						</div>
-						<div class="submit_right">
-							<input class="btn submit_small_green" type="submit" disabled value="Done" />
-						</div>
-						<div class="clear_float"></div>
 					</form>
 				</div>
-			</div>
+			</section>
 
-			<div id="subscribe_form">
+			<section id="subscribe_form">
 				<h1>Subscribe Form</h1>
 				<div class="border">
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="email_icon"></span>
-							<input class="email" type="email" placeholder="Enter your Email" name="Email" />
+							<input name="Email"class="email" type="email" placeholder="Enter your Email" />
 						</div>
-						<div class="submit_right">
-							<input class="btn submit_small_green" type="submit" disabled value="Subscribe" />
+						<div class="content_to_send">
+							<input class="btn submit_small_green" type="submit" value="Subscribe"disabled />
+							<input class="btn submit_small_red" type="submit" value="No, Thanks" disabled />
 						</div>
-						<div class="submit_right">
-							<input class="btn submit_small_red" type="submit" disabled value="No, Thanks" />
-						</div>
-						<div class="clear_float"></div>
 					</form>
 				</div>
-			</div>
+			</section>
 			
 			<div id="logo">
-				<img src="images/footer_logo.png" alt="masteralb-logo-footer" />
+				<a href="">
+					<img src="images/footer_logo.png" alt="masteralb-logo-footer" />
+				</a>
 			</div>
 
-		</section>
-
+		</main>
 		<footer></footer>
 		
 	</div>
