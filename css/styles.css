@@ -30,7 +30,7 @@ body {
     background-size: 100% 100%;
 }
 
-#wrapper {
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ input[type="checkbox"]:hover {
 }
 
 input[type="checkbox"]:checked {
-    background: url("../images/checkbox-checked.png") no-repeat 3.5px 3.5px;
+    background: url("../images/checkbox-checked.png") no-repeat 50% 50%;
 }
 
 p {
@@ -210,23 +210,23 @@ main {
 }
 
 
-#left-column {
+.left-column {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 }
 
-#right-column {
+.right-column {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 }
 
-#register_form,
-#send_email,
-#sign_in_form,
-#recover_form,
-#subscribe_form {
+.register_form,
+.send_email,
+.sign_in_form,
+.recover_form,
+.subscribe_form {
     margin: 0px 45px;
 }
 
@@ -294,12 +294,12 @@ main {
 
 /* Bottom Logo */
 
-#logo {
+.logo {
     width: 100%;
     margin-top: 10%;
 }
 
-#logo a img {
+.logo a img {
     display: flex;
     justify-content: center;
     margin: 40px auto;
