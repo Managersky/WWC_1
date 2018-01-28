@@ -22,41 +22,40 @@
 
 		<main>
 		<div class="left-column">
-
 			<section class="register_form">
 				<h1>Register Form</h1>
 				<div class="border">
-					<form action="#" class="form" method="post">
+					<form action="#" class="form" id="register_form_fields" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
-						 	<input name="username_register_form" class="username" type="text" placeholder="Username" />
+						 	<input name="username_register_form" id="username_register_form" class="username" type="text" placeholder="Username" />
 						 </div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="password_register_form"class="password" type="password" placeholder="Password" />
+						 	<input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" />
 						</div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="confirm_Password_register_form"class="password" type="password" placeholder="Confirm Password" />
+						 	<input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" />
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input class="email" type="email" placeholder="Email" name="email_register_form" />
+							<input name="email_register_form" id="email_register_form" class="email" type="email" placeholder="Email" />
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
 						 	<select class="location">
-								<option>Your Location</option>
-  								<option>Gliwice</option>
-  								<option>Zabrze</option>
-  								<option>Sosnowiec</option>
+								<option value="Location" selected>Your Location</option>
+  								<option value="Gliwice">Gliwice</option>
+  								<option value="Zabrze">Zabrze</option>
+  								<option value="Sosnowiec">Sosnowiec</option>
 							</select>
 						</div>
 						<div class="checkbox_section">
 							<input type="checkbox" id="register-checkbox" />
 							<label for="register-checkbox">I have read and accept the terms of use</label>
 						</div>
-						<input class="btn submit_big" type="submit" value="Sign up" disabled />
+						<input class="btn submit_big" id="register_form_btn" type="button" value="Sign up" href=""/>
 					</form>
 				</div>
 			</section>
@@ -78,14 +77,13 @@
 							<input type="checkbox" id="email-checkbox" />
 							<label for="email-checkbox">Send a copy to my Email</label>
 						</div>
-						<input class="btn submit_big" type="submit" disabled value="Send Email" />
+						<input class="btn submit_big" type="button" value="Send Email" />
 					</form>
 				</div>
 			</section>
 		</div>
 
 		<div class="right-column">
-
 			<section class="sign_in_form">
 				<h1>Sign In Form</h1>
 				<div class="border">
@@ -150,10 +148,8 @@
 					<img src="images/footer_logo.png" alt="masteralb logo and website adress - back to main site" />
 				</a>
 			</div>
-
 		</main>
 		<footer></footer>
-		
 	</div>
 
 </body>

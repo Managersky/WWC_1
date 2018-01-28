@@ -336,11 +336,11 @@ footer {
         font-size: 13px;
         padding: 0px;
     }
-    #register_form,
-    #send_email,
-    #sign_in_form,
-    #recover_form,
-    #subscribe_form {
+    .register_form,
+    .send_email,
+    .sign_in_form,
+    .recover_form,
+    .subscribe_form {
         width: 310px;
         margin: 0;
     }
