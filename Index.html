@@ -28,23 +28,23 @@
 					<form action="#" class="form" id="register_form_fields" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
-						 	<input name="username_register_form" id="username_register_form" class="username" type="text" placeholder="Username" />
+						 	<input name="username_register_form" id="username_register_form" class="username" type="text" placeholder="Username" required/>
 						 </div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" />
+						 	<input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required/>
 						</div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" />
+						 	<input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required/>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input name="email_register_form" id="email_register_form" class="email" type="email" placeholder="Email" />
+							<input name="email_register_form" id="email_register_form" class="email" type="email" placeholder="Email" required/>
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
-						 	<select class="location">
+						 	<select class="location" required>
 								<option value="Location" selected>Your Location</option>
   								<option value="Gliwice">Gliwice</option>
   								<option value="Zabrze">Zabrze</option>
@@ -52,7 +52,7 @@
 							</select>
 						</div>
 						<div class="checkbox_section">
-							<input type="checkbox" id="register-checkbox" />
+							<input type="checkbox" id="register-checkbox" required/>
 							<label for="register-checkbox">I have read and accept the terms of use</label>
 						</div>
 						<input class="btn submit_big" id="register_form_btn" type="button" value="Sign up" href=""/>
@@ -66,13 +66,13 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="Username"class="username" type="text" placeholder="Your Name" />
+							<input name="Username"class="username" type="text" placeholder="Your Name" required/>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-						 	<input name="Email"class="email" type="email" placeholder="Your Email" />
+						 	<input name="Email"class="email" type="email" placeholder="Your Email" required/>
 						</div>
-						<textarea class="textarea" placeholder="Type your message..."></textarea>
+						<textarea class="textarea" placeholder="Type your message..." required></textarea>
 						<div class="checkbox_section">
 							<input type="checkbox" id="email-checkbox" />
 							<label for="email-checkbox">Send a copy to my Email</label>
@@ -90,11 +90,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="Username"class="username" type="text" placeholder="Username" />
+							<input name="Username"class="username" type="text" placeholder="Username" required/>
 						</div>
 						<div class="field">
 							<span class="pass_icon"></span>
-							<input name="Password"class="password" type="password" placeholder="Password" />
+							<input name="Password"class="password" type="password" placeholder="Password" required/>
 						</div>
 						<div class="content_to_send">
 							<div class="checkbox_section small">
@@ -113,11 +113,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input name="Email"class="email" type="email" placeholder="Enter your Email" />
+							<input name="Email"class="email" type="email" placeholder="Enter your Email" required/>
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
-							<input name="Phone_Number"class="phone" type="number" max="9" placeholder="Enter your phone number" />
+							<input name="Phone_Number"class="phone" type="number" max="9" placeholder="Enter your phone number" required/>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Send" disabled />
@@ -133,7 +133,7 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="email_icon"></span>
-							<input name="Email"class="email" type="email" placeholder="Enter your Email" />
+							<input name="Email"class="email" type="email" placeholder="Enter your Email" required/>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Subscribe"disabled />
