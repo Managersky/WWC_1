@@ -1,8 +1,8 @@
-/* Reset stylów przeglądarki */
+/* Reset CSS */
 
 @import url(reset.css);
 
-/* Czcionki i ułożenie elementów na stronie */
+/* Fonts and positioning */
 
 @font-face {
     font-family: 'Titillium_Light';
@@ -37,7 +37,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Style ogólne */
+/* General styles */
 
 img {
     max-width: 100%;
@@ -95,7 +95,7 @@ h1 {
 .form .field .username,
 .form .field .password,
 .form .field .email,
-.form .field .location,
+.form .field select,
 .form .field .phone {
   height: 25px;
   width: 80%;
@@ -185,7 +185,7 @@ select {
     margin: 6px;
 }
 
-/* Nagłówek */
+/* Header */
 
 header {
     display: flex;
@@ -200,7 +200,7 @@ header a img {
     opacity: 0.45;
 }
 
-/* Główna zawartość witryny */
+/* Main content */
 
 main {
     display: flex;
@@ -292,7 +292,7 @@ main {
     margin: 0px auto;
 }
 
-/* Bottom Logo */
+/* Bottom logo */
 
 .logo {
     width: 100%;
@@ -306,14 +306,46 @@ main {
     opacity: 0.2;
 }
 
-/* Stopka */
+/* Footer */
 
 footer {
     width: 100%;
     margin: 20px;
 }
 
-/* Media Queries - style stosowane w zależności od tego w jakiej rozdzielczości wyświetlana jest strona */
+/* Tips for users */
+
+.form .error {
+    color: rgb(219, 8, 62);
+}
+
+.form .error input[type=text],
+.form .error input[type="password"],
+.form .error input[type="email"],
+.form .error textarea,
+.form .error select {
+    color: rgb(219, 8, 62);
+    background: rgb(255, 237, 237) url(/images/error-icon.png);
+    background-repeat: no-repeat;
+    background-size: 10% 80%;
+    background-position: calc(100% - 5px) center;
+}
+
+.form .error textarea {
+    background-position: calc(100% - 5px) 10px;
+}
+
+.form .error input[type="checkbox"] {
+    border-color: rgb(219, 8, 62);
+    background: rgb(255, 237, 237)
+}
+
+.form .error select {
+    background-image: none;
+    padding-right: 4px;
+}
+
+/* Media Queries - depends for page resolution */
 
 @media (max-width: 480px) {
     img {
