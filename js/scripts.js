@@ -1,65 +1,10 @@
-
-// function checkPassword(password, passwordConfirm)
-// {
-//         if (password.value != passwordConfirm.value)
-//         {
-//             alert("Passwords are different!");
-//         }
-// };
-
-// function isEmpty(formFields)
-// {
-//     var formFields = document.querySelectorAll("#register_form_fields .field input");
-//     for (i = 0; i < formFields.length; i++)
-//     {
-//         if (formFields[i].value == "")
-//         {
-//             alert("This field is empty!");
-//         }
-//     }
-// };
-
-// function isChoosen(location)
-// {
-//     if (location[0].value = "Location")
-//         alert("Please choose some option!");
-// };
-
-// function isChecked(checkbox)
-// {
-//     if (checkbox.checked == false)
-//         alert("You don't check this checkbox!");
-// };
-
-// window.onload = function()
-// {
-
-//     var formFields = document.querySelectorAll("#register_form_fields .field input");
-
-//     var username = document.getElementById("username_register_form");
-//     var password = document.getElementById("password_register_form");
-//     var passwordConfirm = document.getElementById("confirm_password_register_form");
-//     var email = document.getElementById("email_register_form");
-//     var location = document.querySelectorAll(".location option");
-//     var checkbox = document.getElementById("register-checkbox");
-
-//     var registerFormButton = document.getElementById("register_form_btn");
-
-//     registerFormButton.onclick = function() 
-//     {
-//         isEmpty(formFields);
-//         checkPassword(password, passwordConfirm);
-//         isChoosen(location);
-//         isChecked(checkbox);
-//     };
-
-// }
-
 const validateForm = (function()
 {
     //private properties
-    const options = {};
+    // const options = {};
     const classError = 'error';
+    var password = document.getElementById("password_register_form");
+    var passwordConfirm = document.getElementById("confirm_password_register_form");
 
     const showFieldValidation = function (input, inputIsValid) {
         if (!inputIsValid) {
@@ -85,6 +30,28 @@ const validateForm = (function()
         }
     };
 
+    const testInputPassword = function (input) {
+        let inputIsValid = true;
+
+        if (input.value == '') {
+            inputIsValid = false;
+        }
+
+        // if (password.value != passwordConfirm.value) {
+        //     passwordConfirm.setCustomValidity("Passwords don't match");
+        // } else {
+        //     passwordConfirm.setCustomValidity('');
+        // }
+
+        if (inputIsValid) {
+            showFieldValidation(input, true);
+            return true;
+        } else {
+            showFieldValidation(input, false);
+            return false;
+        }
+    };
+
     const testInputEmail = function (input) {
         const mailReg = new RegExp('^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$', 'gi');
 
@@ -98,7 +65,7 @@ const validateForm = (function()
     };
 
     const testInputSelect = function (select) {
-        if (select.options[select.selectedIndex].value == '' || select.options[select.selectedIndex].value == '-1') {
+        if (select.options[select.selectedIndex].value == "" || select.options[select.selectedIndex].value == "-1") {
             showFieldValidation(select, false);
             return false;
         } else {
@@ -108,10 +75,8 @@ const validateForm = (function()
     };
 
     const testInputCheckbox = function (input) {
-        const name = input.getAttribute('name');
-        const group = input.form.querySelectorAll(':scope input[name="' + name + '"]:checked');
-
-        if (group.length) {
+        const checkbox = input.form.querySelectorAll(':scope input[type="checkbox"]:checked');
+        if (checkbox.length) {
             showFieldValidation(input, true);
             return true;
         } else {
@@ -119,6 +84,7 @@ const validateForm = (function()
             return false;
         }
     };
+
 
     //prepareElements add event to element with attribute 'required'
     const prepareElements = function () {
@@ -132,38 +98,91 @@ const validateForm = (function()
                 //for every single element, add function check
                 if (type == "TEXT") {
                     element.addEventListener("keyup", function () {
-                        testInputText(element)
+                        testInputText(element);
                     });
                     element.addEventListener("blur", function () {
-                        testInputText(element)
+                        testInputText(element);
+                    });
+                }
+                if (type == "PASSWORD") {
+                    element.addEventListener("keyup", function () {
+                        testInputPassword(element);
+                    });
+                    element.addEventListener("blur", function () {
+                        testInputPassword(element);
                     });
                 }
                 if (type == "EMAIL") {
                     element.addEventListener("keyup", function () {
-                        testInputEmail(element)
+                        testInputEmail(element);
                     });
                     element.addEventListener("blur", function () {
-                        testInputEmail(element)
+                        testInputEmail(element);
                     });
                 }
                 if (type == "CHECKBOX") {
                     element.addEventListener("click", function () {
-                        testInputCheckbox(element)
+                        testInputCheckbox(element);
                     });
                 }
             }
             if (element.nodeName.toUpperCase() == "TEXTAREA") {
                 element.addEventListener("keyup", function () {
-                    testInputText(element)
+                    testInputText(element);
                 });
                 element.addEventListener("blur", function () {
-                    testInputText(element)
+                    testInputText(element);
                 });
             }
             if (element.nodeName.toUpperCase() == "SELECT") {
                 element.addEventListener('change', function () {
-                    testInputSelect(element)
+                    testInputSelect(element);
                 });
+            }
+        });
+    };
+
+    const formSubmit = function () {
+        options.form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let validated = true;
+            const elements = options.form.querySelectorAll(':scope [required]');
+
+            [].forEach.call(elements, function (element) {
+                if (element.nodeName.toUpperCase() == 'INPUT') {
+                    const type = element.type.toUpperCase();
+                    if (type == 'TEXT') {
+                        if (!testInputText(element))
+                            validated = false;
+                    }
+                    if (type == 'PASSWORD') {
+                        if (!testInputPassword(element))
+                            validated = false;
+                    }
+                    if (type == 'EMAIL') {
+                        if (!testInputEmail(element))
+                            validated = false;
+                    }
+                    if (type == 'CHECKBOX') {
+                        if (!testInputCheckbox(element))
+                            validated = false;
+                    }
+                }
+                if (element.nodeName.toUpperCase() == 'TEXTAREA') {
+                    if (!testInputText(element))
+                        validated = false;
+                }
+                if (element.nodeName.toUpperCase() == 'SELECT') {
+                    if (!testInputSelect(element))
+                        validated = false;
+                }
+            });
+
+            if (validated) {
+                this.submit();
+            } else {
+                return false;
             }
         });
     };
@@ -181,7 +200,11 @@ const validateForm = (function()
         }
         //novalidate - there will be no default validation bubbles for the required elements
         options.form.setAttribute("novalidate", "novalidate");
+
+        prepareElements();
+        formSubmit();
     }
+
     return {
         init: init
     }
