@@ -368,6 +368,11 @@ footer {
         font-size: 13px;
         padding: 0px;
     }
+
+    .checkbox_section {
+        font-size: 13px;
+    }
+
     .register_form,
     .send_email,
     .sign_in_form,
@@ -391,4 +396,22 @@ footer {
     .small_checkbox {
         margin-top: 5px;
     }
+    .small {
+        width: 50%;
+    }
+    .sign_in_form .submit_small_green {
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .form {
+        width: 300px;
+    }
+
+    .border {
+        padding: 5px;
+    }
+
 }
