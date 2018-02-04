@@ -3,8 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!meta tag stosowany aby mobilne przeglądarki nie próbowały przeskalować strony!>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!Poprawienie wyświetlania strony w przeglądarkach IE!>
+	 <!-- meta tag stosowany aby mobilne przeglądarki nie próbowały przeskalować strony -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- Poprawienie wyświetlania strony w przeglądarkach IE -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>WWC-1</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/scripts.js" async></script>
@@ -66,11 +68,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="username"class="username" type="text" placeholder="Your Name" required/>
+							<input name="username" class="username" type="text" placeholder="Your Name" required/>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-						 	<input name="Email"class="email" type="email" placeholder="Your Email" required/>
+						 	<input name="Email" class="email" type="email" placeholder="Your Email" required/>
 						</div>
 						<textarea class="textarea" placeholder="Type your message..." required></textarea>
 						<div class="checkbox_section">
@@ -90,15 +92,15 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="Username"class="username" type="text" placeholder="Username" required/>
+							<input name="Username" class="username" type="text" placeholder="Username" required/>
 						</div>
 						<div class="field">
 							<span class="pass_icon"></span>
-							<input name="Password"class="password" type="password" placeholder="Password" required/>
+							<input name="Password" class="password" type="password" placeholder="Password" required/>
 						</div>
 						<div class="content_to_send">
 							<div class="checkbox_section small">
-								<input type="checkbox" class="sign-checkbox" />
+								<input type="checkbox" id="sign-checkbox" />
 								<label for="sign-checkbox">Remember me</label>
 							</div>
 							<input class="btn submit_small_green" type="submit" disabled value="Sign in" />
@@ -113,11 +115,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input name="Email"class="email" type="email" placeholder="Enter your Email" required/>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
-							<input name="Phone_Number"class="phone" type="number" max="9" placeholder="Enter your phone number" required/>
+							<input name="Phone_Number" class="phone" type="number" max="9" placeholder="Enter your phone number" required/>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Send" disabled />
@@ -133,10 +135,10 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="email_icon"></span>
-							<input name="Email"class="email" type="email" placeholder="Enter your Email" required/>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
 						</div>
 						<div class="content_to_send">
-							<input class="btn submit_small_green" type="submit" value="Subscribe"disabled />
+							<input class="btn submit_small_green" type="submit" value="Subscribe" disabled />
 							<input class="btn submit_small_red" type="submit" value="No, Thanks" disabled />
 						</div>
 					</form>
@@ -148,8 +150,11 @@
 					<img src="images/footer_logo.png" alt="masteralb logo and website adress - back to main site" />
 				</a>
 			</div>
+		</div>
 		</main>
+
 		<footer></footer>
+
 	</div>
 
 </body>

@@ -211,7 +211,7 @@ const validateForm = (function()
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector('.form');
+        let form = document.querySelector('.form');
         validateForm.init({
             form: form
         })
