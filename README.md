@@ -13,8 +13,8 @@ My first website:
 ## Problems:
 
 - Layout and positioning elements (solved)
-- Positioning elements next to each other (first time I use float, now I use flex) (solved)
-- Validate more than one form
+- Positioning elements next to each other (first time I use float: left, now I use flexbox) (solved)
+- Validate more than one form (solved)
 
 ## Live:
 

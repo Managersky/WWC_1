@@ -88,7 +88,9 @@ const validateForm = (function()
 
     //prepareElements add event to element with attribute 'required'
     const prepareElements = function () {
-        const elements = options.form.querySelectorAll(":scope [required]");
+        for (let i = 0; i < options.form.length; i++) {
+
+            const elements = options.form[i].querySelectorAll(":scope [required]");
 
         [].forEach.call(elements, function (element) {
             //check type element
@@ -140,14 +142,16 @@ const validateForm = (function()
                 });
             }
         });
+    }
     };
 
     const formSubmit = function () {
-        options.form.addEventListener('submit', function (e) {
+        for (let i = 0; i < options.form.length; i++) {
+            options.form[i].addEventListener('submit', function(e) {
             e.preventDefault();
 
             let validated = true;
-            const elements = options.form.querySelectorAll(':scope [required]');
+            const elements = options.form[i].querySelectorAll(':scope [required]');
 
             [].forEach.call(elements, function (element) {
                 if (element.nodeName.toUpperCase() == 'INPUT') {
@@ -185,6 +189,7 @@ const validateForm = (function()
                 return false;
             }
         });
+    }
     };
 
     //public method
@@ -194,12 +199,16 @@ const validateForm = (function()
             form: _options.form || null,
             classError: _options.classError || "error"
         };
+
         if (options.form == null || options.form == undefined || options.form.length == 0) {
             console.warn("validateForm: Wrong form");
             return false;
         }
+
         //novalidate - there will be no default validation bubbles for the required elements
-        options.form.setAttribute("novalidate", "novalidate");
+        for (let i = 0; i < options.form.length; i++) {
+            options.form[i].setAttribute("novalidate", "novalidate");
+        }
 
         prepareElements();
         formSubmit();
@@ -210,9 +219,12 @@ const validateForm = (function()
     }
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-        let form = document.querySelector('.form');
-        validateForm.init({
-            form: form
-        })
+document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelectorAll('.form');
+        for (let i = 0; i < form.length; i++) {
+            validateForm.init({
+                form: form
+            })
+        }
+
 });

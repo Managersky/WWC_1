@@ -306,6 +306,10 @@ main {
     opacity: 0.2;
 }
 
+.logo a img:hover {
+    opacity: 1;
+}
+
 /* Footer */
 
 footer {
