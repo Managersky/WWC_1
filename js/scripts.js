@@ -1,7 +1,6 @@
 const validateForm = (function()
 {
     //private properties
-    // const options = {};
     const classError = 'error';
     var password = document.getElementById("password_register_form");
     var passwordConfirm = document.getElementById("confirm_password_register_form");

@@ -326,7 +326,6 @@ footer {
 .form .error input[type=text],
 .form .error input[type="password"],
 .form .error input[type="email"],
-.form .error textarea,
 .form .error select {
     color: rgb(219, 8, 62);
     background: rgb(255, 237, 237) url(/images/error-icon.png);
@@ -337,6 +336,7 @@ footer {
 
 .form .error textarea {
     background-position: calc(100% - 5px) 10px;
+    background: rgb(255, 237, 237)
 }
 
 .form .error input[type="checkbox"] {
