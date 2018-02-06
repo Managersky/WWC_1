@@ -12,19 +12,19 @@ const validateForm = (function()
     };
 
     const testInputText = function (input) {
-        let inputIsValid = true;
-
-        if (input.value == '') {
-            inputIsValid = false;
+        let username = document.querySelectorAll(".username");
+        const usernameReg = /^[a-zA-Z][a-z0-9_-]{3,19}$/;
+        for (let i = 0; i < username.length; i++) {
+            if (!usernameReg.test(input.value)) {
+                showFieldValidation(input, false);
+                return false;
+            } else {
+                showFieldValidation(input, true);
+                return true;
+            }
+            console.log("test");
         }
 
-        if (inputIsValid) {
-            showFieldValidation(input, true);
-            return true;
-        } else {
-            showFieldValidation(input, false);
-            return false;
-        }
     };
 
     const testInputPhone= function (input) {
