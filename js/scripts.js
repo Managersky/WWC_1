@@ -29,6 +29,18 @@ const validateForm = (function()
         }
     };
 
+    const testInputPhone= function (input) {
+        const phoneReg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+
+        if (!phoneReg.test(input.value)) {
+            showFieldValidation(input, false);
+            return false;
+        } else {
+            showFieldValidation(input, true);
+            return true;
+        }
+    };
+
     const testInputPassword = function (input) {
         let inputIsValid = true;
 
@@ -126,6 +138,14 @@ const validateForm = (function()
                         testInputCheckbox(element);
                     });
                 }
+                if (type == "NUMBER") {
+                    element.addEventListener("keyup", function () {
+                        testInputPhone(element);
+                    });
+                    element.addEventListener("blur", function () {
+                        testInputPhone(element);
+                    });
+                }
             }
             if (element.nodeName.toUpperCase() == "TEXTAREA") {
                 element.addEventListener("keyup", function () {
@@ -169,6 +189,10 @@ const validateForm = (function()
                     }
                     if (type == 'CHECKBOX') {
                         if (!testInputCheckbox(element))
+                            validated = false;
+                    }
+                    if (type == 'NUMBER') {
+                        if (!testInputPhone(element))
                             validated = false;
                     }
                 }

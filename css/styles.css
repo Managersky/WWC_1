@@ -336,6 +336,7 @@ footer {
 .form .error input[type=text],
 .form .error input[type="password"],
 .form .error input[type="email"],
+.form .error input[type="number"],
 .form .error select {
     color: rgb(219, 8, 62);
     background: rgb(255, 237, 237) url(/images/error-icon.png);
