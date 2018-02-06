@@ -2,8 +2,6 @@ const validateForm = (function()
 {
     //private properties
     const classError = 'error';
-    var password = document.getElementById("password_register_form");
-    var passwordConfirm = document.getElementById("confirm_password_register_form");
 
     const showFieldValidation = function (input, inputIsValid) {
         if (!inputIsValid) {
@@ -42,26 +40,31 @@ const validateForm = (function()
     };
 
     const testInputPassword = function (input) {
-        let inputIsValid = true;
 
-        if (input.value == '') {
-            inputIsValid = false;
-        }
+        const passwordReg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[.#?!@$%^&*-]).{8,}$/; //Min 8 characters, at least one letter, one number and one special character
 
-        // if (password.value != passwordConfirm.value) {
-        //     passwordConfirm.setCustomValidity("Passwords don't match");
-        // } else {
-        //     passwordConfirm.setCustomValidity('');
-        // }
-
-        if (inputIsValid) {
-            showFieldValidation(input, true);
-            return true;
-        } else {
+        if (!passwordReg.test(input.value)) {
             showFieldValidation(input, false);
             return false;
+        } else {
+            showFieldValidation(input, true);
+            return true;
         }
     };
+
+    // const testPasswordConfirm = function (input) {
+    //     let password = document.getElementById("password_register_form");
+    //     let passwordConfirm = document.getElementById("confirm_password_register_form");
+
+    //     if (password.value !== passwordConfirm.value) {
+    //         console.log("zle hasla");
+    //         showFieldValidation(input, false);
+    //         return false;
+    //     } else {
+    //         showFieldValidation(input, true);
+    //         return true;
+    //     }
+    // }
 
     const testInputEmail = function (input) {
         const mailReg = new RegExp('^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$', 'gi');
