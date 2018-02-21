@@ -54,19 +54,19 @@ const validateForm = (function()
         }
     };
 
-    // const testPasswordConfirm = function (input) {
-    //     let password = document.getElementById("password_register_form");
-    //     let passwordConfirm = document.getElementById("confirm_password_register_form");
+    function testPasswordConfirm(input) {
+        let password = document.getElementById("password_register_form");
+        let passwordConfirm = document.getElementById("confirm_password_register_form");
 
-    //     if (password.value !== passwordConfirm.value) {
-    //         console.log("zle hasla");
-    //         showFieldValidation(input, false);
-    //         return false;
-    //     } else {
-    //         showFieldValidation(input, true);
-    //         return true;
-    //     }
-    // }
+        if (password.value !== passwordConfirm.value) {
+            console.log("zle hasla");
+            showFieldValidation(input, false);
+            return false;
+        } else {
+            showFieldValidation(input, true);
+            return true;
+        }
+    }
 
     const testInputEmail = function (input) {
         const mailReg = new RegExp('^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$', 'gi');
@@ -186,7 +186,7 @@ const validateForm = (function()
                             validated = false;
                     }
                     if (type == 'PASSWORD') {
-                        if (!testInputPassword(element))
+                        if (!testInputPassword(element) || !testPasswordConfirm(element))
                             validated = false;
                     }
                     if (type == 'EMAIL') {

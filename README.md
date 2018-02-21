@@ -16,7 +16,7 @@ My first website:
 - Positioning elements next to each other (first time I use float: left, now I use flexbox) (solved)
 - Validate more than one form (solved)
 - Add tooltips (solved)
-- Compare passwords
+- Compare passwords (solved)
 
 ## Live:
 
