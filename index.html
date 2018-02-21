@@ -9,7 +9,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>WWC-1</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/scripts.js" async></script>
 </head>
 
 <body>
@@ -30,19 +29,23 @@
 					<form action="#" class="form" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
-						 	<input name="username_register_form" class="username" type="text" placeholder="Username" required/>
+							 <input name="username_register_form" class="username" type="text" placeholder="Username" required/>
+							 <div class="tooltip">First sign should be letter, maximum 19 characters</div>
 						 </div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required/>
+							 <input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required/>
+							 <div class="tooltip">Minimum 8 characters, at least one letter, one number and one special character</div>
 						</div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-						 	<input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required/>
+							 <input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required/>
+							 <div class="tooltip">Passwords are different!</div>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
 							<input name="email_register_form" class="email" type="email" placeholder="Email" required/>
+							<div class="tooltip">Email should have @</div>
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
@@ -52,6 +55,7 @@
   								<option value="Zabrze">Zabrze</option>
   								<option value="Sosnowiec">Sosnowiec</option>
 							</select>
+							<div class="tooltip">You don't choose location</div>
 						</div>
 						<div class="checkbox_section">
 							<input type="checkbox" id="register-checkbox" required/>
@@ -69,10 +73,12 @@
 						<div class="field">
 							<span class="user_icon"></span>
 							<input name="username" class="username" type="text" placeholder="Your Name" required/>
+							<div class="tooltip">First sign should be letter, maximum 19 characters</div>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-						 	<input name="Email" class="email" type="email" placeholder="Your Email" required/>
+							 <input name="Email" class="email" type="email" placeholder="Your Email" required/>
+							 <div class="tooltip">Email should have @</div>
 						</div>
 						<div class="field_textarea">
 							<textarea class="textarea" placeholder="Type your message..." required></textarea>
@@ -95,10 +101,12 @@
 						<div class="field">
 							<span class="user_icon"></span>
 							<input name="username" class="username" type="text" placeholder="Username" required/>
+							<div class="tooltip">First sign should be letter, maximum 19 characters</div>
 						</div>
 						<div class="field">
 							<span class="pass_icon"></span>
 							<input name="Password" class="password" type="password" placeholder="Password" required/>
+							<div class="tooltip">Minimum 8 characters, at least one letter, one number and one special character</div>
 						</div>
 						<div class="content_to_send">
 							<div class="checkbox_section small">
@@ -118,10 +126,12 @@
 						<div class="field">
 						 	<span class="email_icon"></span>
 							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
+							<div class="tooltip">Email should have @</div>
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
 							<input name="Phone_Number" class="phone" type="number" maxlength="9" placeholder="Enter your phone number" required/>
+							<div class="tooltip">Maximum 7 numbers</div>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Send" />
@@ -138,6 +148,7 @@
 						<div class="field">
 							<span class="email_icon"></span>
 							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
+							<div class="tooltip">Email should have @</div>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Subscribe" />
@@ -159,6 +170,7 @@
 
 	</div>
 
+	<script src="js/scripts.js" defer></script>
 </body>
 
 </html>

@@ -76,6 +76,7 @@ h1 {
   border-radius: 5px;
   background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
   color: #afafaf;
+  position: relative;
 }
 
 .textarea {
@@ -358,6 +359,15 @@ footer {
 .form .error select {
     background-image: none;
     padding-right: 4px;
+}
+
+.form .tooltip {
+    visibility: hidden;
+    position: absolute;
+    font-size: 0.7rem;
+    color: rgb(219, 8, 62);
+    top: 110%;
+    left: 20%;
 }
 
 /* Media Queries - depends for page resolution */

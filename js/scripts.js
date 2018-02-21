@@ -4,15 +4,19 @@ const validateForm = (function()
     const classError = 'error';
 
     const showFieldValidation = function (input, inputIsValid) {
+
         if (!inputIsValid) {
             input.parentNode.classList.add(options.classError);
+            input.nextElementSibling.style.visibility = "visible";
         } else {
             input.parentNode.classList.remove(options.classError);
+            input.nextElementSibling.style.visibility = "hidden";
         }
     };
 
     const testInputText = function (input) {
         let username = document.querySelectorAll(".username");
+
         const usernameReg = /^[a-zA-Z][a-z0-9_-]{3,19}$/;
         for (let i = 0; i < username.length; i++) {
             if (!usernameReg.test(input.value)) {
@@ -22,9 +26,7 @@ const validateForm = (function()
                 showFieldValidation(input, true);
                 return true;
             }
-            console.log("test");
         }
-
     };
 
     const testInputPhone= function (input) {
@@ -178,6 +180,7 @@ const validateForm = (function()
             [].forEach.call(elements, function (element) {
                 if (element.nodeName.toUpperCase() == 'INPUT') {
                     const type = element.type.toUpperCase();
+
                     if (type == 'TEXT') {
                         if (!testInputText(element))
                             validated = false;
@@ -252,5 +255,4 @@ document.addEventListener("DOMContentLoaded", function() {
                 form: form
             })
         }
-
 });
