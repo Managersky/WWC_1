@@ -7,10 +7,27 @@ const validateForm = (function()
 
         if (!inputIsValid) {
             input.parentNode.classList.add(options.classError);
-            input.nextElementSibling.style.visibility = "visible";
+            displayFieldError(input);
         } else {
             input.parentNode.classList.remove(options.classError);
-            input.nextElementSibling.style.visibility = "hidden";
+            hideFieldError(input);
+        }
+    };
+
+    const displayFieldError = function (input) {
+        const fieldError = input.parentNode.closest('.error');
+        const errorText = input.dataset.error;
+        const divError = document.createElement('div');
+        divError.classList.add('field-error');
+        divError.innerText = errorText;
+        fieldError.appendChild(divError);
+    };
+
+    const hideFieldError = function (input) {
+        const fieldError = input.parentNode.lastElementChild;
+        const fieldErrorClass = fieldError.className;
+        if (fieldErrorClass === "field-error") {
+            fieldError.remove();
         }
     };
 
@@ -241,11 +258,11 @@ const validateForm = (function()
 
         prepareElements();
         formSubmit();
-    }
+    };
 
     return {
         init: init
-    }
+    };
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -253,6 +270,6 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < form.length; i++) {
             validateForm.init({
                 form: form
-            })
+            });
         }
 });

@@ -361,8 +361,8 @@ footer {
     padding-right: 4px;
 }
 
-.form .tooltip {
-    visibility: hidden;
+/* field for validation */
+.form .field-error {
     position: absolute;
     font-size: 0.7rem;
     color: rgb(219, 8, 62);
