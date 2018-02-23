@@ -45,7 +45,7 @@
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
-						 	<select class="location" required>
+						 	<select class="location" required data-error="You don't choose location">
 								<option value="" selected>Your Location</option>
   								<option value="Gliwice">Gliwice</option>
   								<option value="Zabrze">Zabrze</option>
@@ -53,7 +53,7 @@
 							</select>
 						</div>
 						<div class="checkbox_section">
-							<input type="checkbox" id="register-checkbox" required data-error="You don't choose location"/>
+							<input type="checkbox" id="register-checkbox" required data-error="Check this field"/>
 							<label for="register-checkbox">I have read and accept the terms of use</label>
 						</div>
 						<input class="btn submit_big" id="register_form_btn" type="submit" value="Sign up" />
