@@ -15,17 +15,22 @@ const validateForm = (function()
     };
 
     const displayFieldError = function (input) {
-        const fieldError = input.parentNode.closest('.error');
-        const errorText = input.dataset.error;
+        const field = input.parentNode.closest('.error');
+        const fieldError = field.querySelector('.field-error');
+
+        if (fieldError === null) {
         const divError = document.createElement('div');
+        const errorText = input.dataset.error;
         divError.classList.add('field-error');
         divError.innerText = errorText;
-        fieldError.appendChild(divError);
+        field.appendChild(divError);
+        }
     };
 
     const hideFieldError = function (input) {
         const fieldError = input.parentNode.lastElementChild;
         const fieldErrorClass = fieldError.className;
+
         if (fieldErrorClass === "field-error") {
             fieldError.remove();
         }
