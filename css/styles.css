@@ -79,6 +79,14 @@ h1 {
   position: relative;
 }
 
+.form .field_textarea {
+    position: relative;
+}
+
+.form .checkbox_section {
+    position: relative;
+}
+
 .textarea {
   display: flex;
   min-height: 225px;
@@ -361,14 +369,25 @@ footer {
     padding-right: 4px;
 }
 
-.form .tooltip {
-    visibility: hidden;
+/* field for validation */
+.form .field-error {
     position: absolute;
     font-size: 0.7rem;
     color: rgb(219, 8, 62);
     top: 110%;
     left: 20%;
 }
+
+.form .field_textarea .field-error {
+    top: 102%;
+    left: 6%;
+}
+
+.form .checkbox_section .field-error {
+    top: 96%;
+    left: 1%;
+}
+
 
 /* Media Queries - depends for page resolution */
 

@@ -29,36 +29,31 @@
 					<form action="#" class="form" method="post">
 					 	<div class="field">
 						 	<span class="user_icon"></span>
-							 <input name="username_register_form" class="username" type="text" placeholder="Username" required/>
-							 <div class="tooltip">First sign should be letter, maximum 19 characters</div>
+							 <input name="username_register_form" class="username" type="text" placeholder="Username" required data-error="First sign should be letter, maximum 19 characters"/>
 						 </div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-							 <input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required/>
-							 <div class="tooltip">Minimum 8 characters, at least one letter, one number and one special character</div>
+							 <input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required data-error="Minimum 8 characters, at least one letter, one number and one special character"/>
 						</div>
 						<div class="field">
 						 	<span class="pass_icon"></span>
-							 <input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required/>
-							 <div class="tooltip">Passwords are different!</div>
+							 <input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required data-error="Passwords are different!"/>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input name="email_register_form" class="email" type="email" placeholder="Email" required/>
-							<div class="tooltip">Email should have @</div>
+							<input name="email_register_form" class="email" type="email" placeholder="Email" required data-error="Email should have @"/>
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
-						 	<select class="location" required>
+						 	<select class="location" required data-error="You don't choose location">
 								<option value="" selected>Your Location</option>
   								<option value="Gliwice">Gliwice</option>
   								<option value="Zabrze">Zabrze</option>
   								<option value="Sosnowiec">Sosnowiec</option>
 							</select>
-							<div class="tooltip">You don't choose location</div>
 						</div>
 						<div class="checkbox_section">
-							<input type="checkbox" id="register-checkbox" required/>
+							<input type="checkbox" id="register-checkbox" required data-error="Check this field"/>
 							<label for="register-checkbox">I have read and accept the terms of use</label>
 						</div>
 						<input class="btn submit_big" id="register_form_btn" type="submit" value="Sign up" />
@@ -72,16 +67,14 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="username" class="username" type="text" placeholder="Your Name" required/>
-							<div class="tooltip">First sign should be letter, maximum 19 characters</div>
+							<input name="username" class="username" type="text" placeholder="Your Name" required data-error="First sign should be letter, maximum 19 characters"/>
 						</div>
 						<div class="field">
 						 	<span class="email_icon"></span>
-							 <input name="Email" class="email" type="email" placeholder="Your Email" required/>
-							 <div class="tooltip">Email should have @</div>
+							 <input name="Email" class="email" type="email" placeholder="Your Email" required data-error="Email should have @"/>
 						</div>
 						<div class="field_textarea">
-							<textarea class="textarea" placeholder="Type your message..." required></textarea>
+							<textarea class="textarea" placeholder="Type your message..." required data-error="Write something"></textarea>
 						</div>
 						<div class="checkbox_section">
 							<input type="checkbox" id="email-checkbox" />
@@ -100,13 +93,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="user_icon"></span>
-							<input name="username" class="username" type="text" placeholder="Username" required/>
-							<div class="tooltip">First sign should be letter, maximum 19 characters</div>
+							<input name="username" class="username" type="text" placeholder="Username" required data-error="First sign should be letter, maximum 19 characters"/>
 						</div>
 						<div class="field">
 							<span class="pass_icon"></span>
-							<input name="Password" class="password" type="password" placeholder="Password" required/>
-							<div class="tooltip">Minimum 8 characters, at least one letter, one number and one special character</div>
+							<input name="Password" class="password" type="password" placeholder="Password" required data-error="Minimum 8 characters, at least one letter, one number and one special character"/>
 						</div>
 						<div class="content_to_send">
 							<div class="checkbox_section small">
@@ -125,13 +116,11 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 						 	<span class="email_icon"></span>
-							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
-							<div class="tooltip">Email should have @</div>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required data-error="Email should have @"/>
 						</div>
 						<div class="field">
 							<span class="phone_icon"></span>
-							<input name="Phone_Number" class="phone" type="number" maxlength="9" placeholder="Enter your phone number" required/>
-							<div class="tooltip">Maximum 7 numbers</div>
+							<input name="Phone_Number" class="phone" type="number" maxlength="9" placeholder="Enter your phone number" required data-error="Maximum 7 numbers"/>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Send" />
@@ -147,8 +136,7 @@
 					<form action="#" class="form" method="post">
 						<div class="field">
 							<span class="email_icon"></span>
-							<input name="Email" class="email" type="email" placeholder="Enter your Email" required/>
-							<div class="tooltip">Email should have @</div>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required data-error="Email should have @"/>
 						</div>
 						<div class="content_to_send">
 							<input class="btn submit_small_green" type="submit" value="Subscribe" />
