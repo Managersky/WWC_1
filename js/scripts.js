@@ -81,7 +81,6 @@ const validateForm = (function()
         let passwordConfirm = document.getElementById("confirm_password_register_form");
 
         if (password.value !== passwordConfirm.value) {
-            console.log("zle hasla");
             showFieldValidation(input, false);
             return false;
         } else {
@@ -235,7 +234,9 @@ const validateForm = (function()
             });
 
             if (validated) {
-                this.submit();
+                this.classList.add('submit-busy');
+                this.disabled = true;
+                // this.submit();
             } else {
                 return false;
             }
