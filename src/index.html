@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	 <!-- meta tag stosowany aby mobilne przeglądarki nie próbowały przeskalować strony -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- Poprawienie wyświetlania strony w przeglądarkach IE -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WWC-1</title>
+	<!-- build:css -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- endbuild -->
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header>
+			<a href="">
+				<img src="images/top_logo.png" alt="masteralb" />
+			</a>
+		</header>
+
+		<main>
+		<div class="left-column">
+			<section class="register_form">
+				<h1>Register Form</h1>
+				<div class="border">
+					<form class="form" method="post" action="#" >
+					 	<div class="field">
+						 	<span class="user_icon"></span>
+							 <input name="username_register_form" class="username" type="text" placeholder="Username" required data-error="First sign should be letter, maximum 19 characters"/>
+						 </div>
+						<div class="field">
+						 	<span class="pass_icon"></span>
+							 <input name="password_register_form" id="password_register_form" class="password" type="password" placeholder="Password" required data-error="Minimum 8 characters, at least one letter, one number and one special character"/>
+						</div>
+						<div class="field">
+						 	<span class="pass_icon"></span>
+							 <input name="confirm_password_register_form" id="confirm_password_register_form" class="password" type="password" placeholder="Confirm Password" required data-error="Passwords are different!"/>
+						</div>
+						<div class="field">
+						 	<span class="email_icon"></span>
+							<input name="email_register_form" class="email" type="email" placeholder="Email" required data-error="Email should have @"/>
+						</div>
+						<div class="field">
+						 	<span class="location_icon"></span>
+						 	<select class="location" required data-error="You don't choose location">
+								<option value="" selected>Your Location</option>
+  								<option value="Gliwice">Gliwice</option>
+  								<option value="Zabrze">Zabrze</option>
+  								<option value="Sosnowiec">Sosnowiec</option>
+							</select>
+						</div>
+						<div class="checkbox_section">
+							<input type="checkbox" id="register-checkbox" required data-error="Check this field"/>
+							<label for="register-checkbox">I have read and accept the terms of use</label>
+						</div>
+						<input class="btn submit_big" type="submit" value="Sign up" />
+					</form>
+				</div>
+			</section>
+
+			<section id="send_email">
+				<h1>Send Email</h1>
+				<div class="border">
+					<form class="form" method="post" action="#">
+						<div class="field">
+							<span class="user_icon"></span>
+							<input name="username" class="username" type="text" placeholder="Your Name" required data-error="First sign should be letter, maximum 19 characters"/>
+						</div>
+						<div class="field">
+						 	<span class="email_icon"></span>
+							 <input name="Email" class="email" type="email" placeholder="Your Email" required data-error="Email should have @"/>
+						</div>
+						<div class="field_textarea">
+							<textarea class="textarea" placeholder="Type your message..." required data-error="Write something"></textarea>
+						</div>
+						<div class="checkbox_section">
+							<input type="checkbox" id="email-checkbox" />
+							<label for="email-checkbox">Send a copy to my Email</label>
+						</div>
+						<input class="btn submit_big" type="submit" value="Send Email" />
+					</form>
+				</div>
+			</section>
+		</div>
+
+		<div class="right-column">
+			<section class="sign_in_form">
+				<h1>Sign In Form</h1>
+				<div class="border">
+					<form class="form" method="post" action="#">
+						<div class="field">
+							<span class="user_icon"></span>
+							<input name="username" class="username" type="text" placeholder="Username" required data-error="First sign should be letter, maximum 19 characters"/>
+						</div>
+						<div class="field">
+							<span class="pass_icon"></span>
+							<input name="Password" class="password" type="password" placeholder="Password" required data-error="Minimum 8 characters, at least one letter, one number and one special character"/>
+						</div>
+						<div class="content_to_send">
+							<div class="checkbox_section small">
+								<input type="checkbox" id="sign-checkbox" />
+								<label for="sign-checkbox">Remember me</label>
+							</div>
+							<input class="btn submit_small_green" type="submit" value="Sign in" />
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section id="recover_form">
+				<h1>Recover Form</h1>
+				<div class="border">
+					<form class="form" method="post" action="#">
+						<div class="field">
+						 	<span class="email_icon"></span>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required data-error="Email should have @"/>
+						</div>
+						<div class="field">
+							<span class="phone_icon"></span>
+							<input name="Phone_Number" class="phone" type="number" maxlength="9" placeholder="Enter your phone number" required data-error="Maximum 7 numbers"/>
+						</div>
+						<div class="content_to_send">
+							<input class="btn submit_small_green" type="submit" value="Send" />
+							<input class="btn submit_small_green" type="submit" value="Done" />
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="subscribe_form">
+				<h1>Subscribe Form</h1>
+				<div class="border">
+					<form class="form" method="post" action="#">
+						<div class="field">
+							<span class="email_icon"></span>
+							<input name="Email" class="email" type="email" placeholder="Enter your Email" required data-error="Email should have @"/>
+						</div>
+						<div class="content_to_send">
+							<input class="btn submit_small_green" id="test" type="submit" value="Subscribe" />
+							<input class="btn submit_small_red" type="submit" value="No, Thanks" />
+						</div>
+					</form>
+				</div>
+			</section>
+			
+			<div class="logo">
+				<a href="">
+					<img src="images/footer_logo.png" alt="masteralb logo and website adress - back to main site" />
+				</a>
+			</div>
+		</div>
+		</main>
+
+		<footer></footer>
+
+	</div>
+	<!-- build:js -->
+	<script src="js/scripts.js" defer></script>
+	<!-- endbuild -->
+</body>
+
+</html>

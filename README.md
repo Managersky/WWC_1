@@ -9,6 +9,7 @@ My first website:
 - Use FlexBox
 - Responsive Web Design
 - First JS script
+- Use SASS and Gulp
 
 ## Problems:
 
