@@ -23,11 +23,13 @@ var path = {
     imgin: "src/images/**/*.{jpg,jpeg,png,gif}",
     htmlin: "src/*.html",
     scssin: "src/scss/**/*.scss",
+    fontsin: "src/fonts/**/*.*",
     cssout: "dest/css/",
     jsout: "dest/js/",
     imgout: "dest/images/",
     htmlout: "dest/",
     scssout: "src/css/",
+    fontsout: "dest/fonts/",
     cssoutname: "style.css",
     jsoutname: "script.js",
     cssplaceout: "css/style.css",
@@ -98,12 +100,17 @@ gulp.task("html", function() {
     .pipe(gulp.dest(path.dest));
 });
 
+gulp.task("fonts", function() {
+    return gulp.src(path.fontsin)
+    .pipe(gulp.dest(path.fontsout));
+});
+
 gulp.task("clean", function() {
     return del([path.dest]);
 });
 
 gulp.task("build", function() {
-    sequence("clean", ["html", "js", "css", "img"]);
+    sequence("clean", ["html", "js", "css", "img", "fonts"]);
 });
 
 gulp.task("default", ["serve"]);
