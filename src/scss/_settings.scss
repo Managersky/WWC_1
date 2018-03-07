@@ -1,1 +1,9 @@
-$bg-color: red;
+@font-face {
+    font-family: 'Titillium_Light';
+    src: url("../fonts/TitilliumText22L002.otf");
+}
+
+@font-face {
+    font-family: 'Titillium_Medium';
+    src: url("../fonts/TitilliumText22L004.otf");
+}
