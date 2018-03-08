@@ -14,7 +14,7 @@ var htmlReplace = require("gulp-html-replace"); //minifikacja HTML
 var htmlmin = require("gulp-htmlmin");  //minifikacja HTML
 var del = require("del"); // stworzenie wersji produkcyjnej - usuniecie folderu dest
 var sequence = require("run-sequence"); //odpalenie zadan synchronicznie (gulp ma nature asynchroniczna)
-var deploy = require('gulp-gh-pages'); //push strony na github-pages
+var deploy = require("gulp-gh-pages"); //push strony na github-pages
 
 var path = {
     dest: "dest/",
@@ -114,9 +114,12 @@ gulp.task("build", function() {
     sequence("clean", ["html", "js", "css", "img", "fonts"]);
 });
 
-gulp.task('deploy', function () {
+gulp.task('deploy', ["build"], function () {
     return gulp.src(path.dest)
-        .pipe(deploy());
+        .pipe(deploy({
+            remoteUrl: "https://witoldmetel.github.io/WWC_1/",
+            branch: "master"
+        }));
 });
 
 gulp.task("default", ["serve"]);
