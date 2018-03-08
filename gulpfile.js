@@ -14,6 +14,7 @@ var htmlReplace = require("gulp-html-replace"); //minifikacja HTML
 var htmlmin = require("gulp-htmlmin");  //minifikacja HTML
 var del = require("del"); // stworzenie wersji produkcyjnej - usuniecie folderu dest
 var sequence = require("run-sequence"); //odpalenie zadan synchronicznie (gulp ma nature asynchroniczna)
+var deploy = require('gulp-gh-pages'); //push strony na github-pages
 
 var path = {
     dest: "dest/",
@@ -111,6 +112,11 @@ gulp.task("clean", function() {
 
 gulp.task("build", function() {
     sequence("clean", ["html", "js", "css", "img", "fonts"]);
+});
+
+gulp.task('deploy', function () {
+    return gulp.src(path.dest)
+        .pipe(deploy());
 });
 
 gulp.task("default", ["serve"]);
