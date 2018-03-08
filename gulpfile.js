@@ -114,12 +114,9 @@ gulp.task("build", function() {
     sequence("clean", ["html", "js", "css", "img", "fonts"]);
 });
 
-gulp.task('deploy', ["build"], function () {
+gulp.task('deploy', function () {
     return gulp.src('./dest/**/*')
-        .pipe(deploy({
-            remoteUrl: "https://witoldmetel.github.io/WWC_1/",
-            branch: "master"
-        }));
+        .pipe(deploy());
 });
 
 gulp.task("default", ["serve"]);
