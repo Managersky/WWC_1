@@ -115,7 +115,7 @@ gulp.task("build", function() {
 });
 
 gulp.task('deploy', ["build"], function () {
-    return gulp.src(path.dest)
+    return gulp.src('./dest/**/*')
         .pipe(deploy({
             remoteUrl: "https://witoldmetel.github.io/WWC_1/",
             branch: "master"
