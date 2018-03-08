@@ -351,7 +351,7 @@ footer {
             &[type="email"],
             &[type="number"] {
                 color: rgb(219, 8, 62);
-                background: rgb(255, 237, 237) url(/images/error-icon.png);
+                background: rgb(255, 237, 237) url("../images/error-icon.png");
                 background-repeat: no-repeat;
                 background-size: 10% 80%;
                 background-position: calc(100% - 5px) center;
@@ -359,7 +359,7 @@ footer {
         }
         select {
             color: rgb(219, 8, 62);
-            background: rgb(255, 237, 237) url(/images/error-icon.png);
+            background: rgb(255, 237, 237) url("../images/error-icon.png");
             background-repeat: no-repeat;
             background-size: 10% 80%;
             background-position: calc(100% - 5px) center;
