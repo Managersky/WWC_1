@@ -234,8 +234,8 @@ const validateForm = (function()
             });
 
             if (validated) {
+                this.disabled = false;
                 this.classList.add('submit-busy');
-                this.disabled = true;
                 // this.submit();
             } else {
                 return false;

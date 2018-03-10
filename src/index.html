@@ -30,7 +30,7 @@
 			<section class="register_form">
 				<h1>Register Form</h1>
 				<div class="border">
-					<form class="form" method="post" action="#" >
+					<form class="form" method="post" action="./form.php" >
 					 	<div class="field">
 						 	<span class="user_icon"></span>
 							 <input name="username_register_form" class="username" type="text" placeholder="Username" required data-error="First sign should be letter, maximum 19 characters"/>
@@ -49,7 +49,7 @@
 						</div>
 						<div class="field">
 						 	<span class="location_icon"></span>
-						 	<select class="location" required data-error="You don't choose location">
+						 	<select name="location_register_form" class="location" required data-error="You don't choose location">
 								<option value="" selected>Your Location</option>
   								<option value="Gliwice">Gliwice</option>
   								<option value="Zabrze">Zabrze</option>
@@ -57,7 +57,7 @@
 							</select>
 						</div>
 						<div class="checkbox_section">
-							<input type="checkbox" id="register-checkbox" required data-error="Check this field"/>
+							<input name="register_checkbox" type="checkbox" id="register-checkbox" required data-error="Check this field"/>
 							<label for="register-checkbox">I have read and accept the terms of use</label>
 						</div>
 						<input class="btn submit_big" type="submit" value="Sign up" />
